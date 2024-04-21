@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/investigacion11.css">
+    <link rel="shortcut icon" href="icon/lupa.png" type="image/x-icon">
+    <title>Investigación #11</title>
+</head>
+<body>
+    <nav>
+        <h1>INICIO • TRABAJOS • INVESTIGACIONES • <i class="seccion_investigacion">INVESTIGACIÓN #11</i></h1>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="indices">
+                <div class="info-secciones">
+                    <h1>Secciones</h1>
+                    <p><a href="#titulo-descrip">• Investigación</a></p>
+                    <p><a href="#inv-1">• Símbolos</a></p>
+                    <p><a href="#inv-2">• Sintaxis</a></p>
+                    <p><a href="#inv-3">• Esqueleto</a></p>
+                    <p><a href="#inv-4">• Aplicación</a></p>
+                    <p><a href="#inv-5">• Paradigma</a></p>
+                    <p><a href="#inv-6">• Ejemplo</a></p>
+                    <hr>
+                    <p><a href="investigacion12.html">• Siguiente</a></p>
+                    <p><a href="investigacion10.html">• Atrás</a></p>
+                    <hr>
+                    <p><a href="#">• Ir al principio</a></p>
+                    <p><a href="#footer">• Ir al final</a></p>
+                </div>
+            </div>
+
+            <div class="post" id="titulo-descrip">
+                <div class="titulo-descrip">
+                    <h1>Investigación #11:</h1>
+                    <h2>Investigar para el lenguaje 'Cobol' sus símbolos, sintaxis, esqueleto de los programas, aplicación a descargar, paradigma
+                        y un ejemplo escrito en dicho lenguaje.</h2>
+                </div>
+            </div>
+
+            <div class="post" id="inv-1">
+                <div class="investigacion">
+                    <h1>Símbolos</h1>
+                    <h2>Conjunto de caracteres:</h2>
+                    <div class="símbolos-programa">
+                        <img src="img/cobol_simbolos_programa-png.png" alt="Símbolos del lenguaje Cobol">
+                    </div>
+                </div>
+            </div>
+
+            <div class="post" id="inv-2">
+                <div class="investigacion">
+                    <h1>Sintaxis</h1>
+                    <li>En COBOL hay cuatro tipos diferentes de palabras. Las palabras reservadas los nombres del sistema, los nombres de
+                        funciones y las creadas por el propio usuario.</li>
+                    <li>Estas palabras nunca podrán superar los 30 caracteres de longitud, de lo contrario, generaremos un error y nuestro
+                        programa no funcionará.</li>
+                    <li>Las normas para nombrar palabras son estrictas, solo podrás utilizar valores numéricos (0-9) o alfabéticos (a-z) y
+                        ningún tipo de símbolo a excepción del guión (-), pero nunca hay que colocarlo al comienzo de la palabra.</li>
+                    <li>COBOL no es case sensitive (no detecta mayúsculas o minúsculas), por lo que dará lo mismo escribir PALABRA que palabra o PaLaBrA.</li>
+                    <li>Cómo todo lenguaje de programación, COBOL tiene una serie de palabras reservadas, las cuales no podrás utilizar para
+                        definir nombres de variables.</li>
+                    <li>Ten siempre en cuenta que el punto (.) es crucial en COBOL. Es el equivalente al punto y coma de la mayoría de
+                        lenguajes. Hasta que el compilador no encuentra el punto no finaliza la instrucción e irá interpretando del tirón
+                        todo el código hasta que encuentre un punto.</li>
+                </div>
+            </div>
+
+            <div class="post" id="inv-3">
+                <div class="investigacion">
+                    <h1>Esqueleto de los programas</h1> 
+                    <p>Un programa COBOL estructura consta de divisiones, como se muestra en la imagen siguiente:</p>
+                    <div class="esqueleto-programa">
+                        <img src="img/esqueleto_cobol_programa.jpg" alt="Ilustración de la estructura de un programa Cobol">
+                    </div>
+                    <h2>Programa COBOL</h2>
+                    <p>La estructura de un programa en COBOL es la siguiente:</p>
+                    <div class="code-info">
+                        <code>IDENTIFICATION DIVISION.
+                            <br>PROGRAM-ID. HELLO.
+                            <br>
+                            <br>ENVIRONMENT DIVISION.
+                            <br>
+                            <br>ㅤㅤINPUT-OUTPUT SECTION.
+                            <br>ㅤㅤFILE-CONTROL.
+                            <br>ㅤㅤSELECT FILEN ASSIGN TO INPUT.
+                            <br>ㅤㅤㅤㅤㅤㅤORGANIZATION IS SEQUENTIAL.
+                            <br>ㅤㅤㅤㅤㅤㅤACCESS IS SEQUENTIAL.
+                            <br>          
+                            <br>DATA DIVISION.
+                            <br>ㅤㅤFILE SECTION.
+                            <br>ㅤㅤFD FILEN
+                            <br>ㅤㅤ01 NAME PIC A(25).
+                            <br>
+                            <br>ㅤㅤWORKING-STORAGE SECTION.
+                            <br>ㅤㅤ01 WS-STUDENT PIC A(30).
+                            <br>ㅤㅤ01 WS-ID PIC 9(5).
+                            <br>
+                            <br>ㅤㅤLOCAL-STORAGE SECTION.
+                            <br>ㅤㅤ01 LS-CLASS PIC 9(3).
+                            <br>
+                            <br>ㅤㅤLINKAGE SECTION.
+                            <br>ㅤㅤ01 LS-ID PIC 9(5).
+                            <br>
+                            <br>PROCEDURE DIVISION.
+                            <br>ㅤㅤDISPLAY 'Executing COBOL program using JCL'.
+                            <br>STOP RUN.</code>
+                    </div>
+                    <p><b>El JCL</b> para ejecutar el programa COBOL es la siguiente:</p>
+                    <div class="code-info">
+                        <code>//SAMPLE JOB(TESTJCL,XXXXXX),CLASS=A,MSGCLASS=C
+                            <br>//STEP1 EXEC PGM=HELLO
+                            <br>//INPUT DD DSN=ABC.EFG.XYZ,DISP=SHR</code>
+                    </div>
+                    <p>Cuando se compila y ejecuta el programa antes mencionado, se produce el resultado siguiente:</p>
+                    <div class="code-info">
+                        <code>Executing COBOL program using JCL</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post" id="inv-4">
+                <div class="investigacion">
+                    <h1>Aplicación a descargar para editar y ejecutar</h1>
+                    <p>Hay unos cuantos IDEs para editar y ejecutar COBOL, pero uno de los más recomendados es usar el famoso IDE <b>Visual
+                        Studio Code</b> que incluye un plugin para trabajar con COBOL llamado <b>Visual Cobol</b>, y el IDE
+                        <b>OpenCobolIDE</b>. Es decisión personal cuál usar para trabajar con COBOL.</p>
+                    <div class="programa">
+                        <img src="img/app_vsc.png" alt="Logo de Visual Studio Code">
+                        <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>
+                    </div>
+                    <hr>
+                    <div class="programa">
+                        <img src="img/cobol_programa.png" alt="Logo del lenguaje Cobol">
+                        <a href="https://launchpad.net/cobcide/+download" target="_blank">OpenCobolIDE</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post" id="inv-5">
+                <div class="investigacion">
+                    <h1>Paradigma</h1>
+                    <p>COBOL pertenece al <b>paradigma imperativo</b>.</p>
+                </div>
+            </div>
+
+            <div class="post" id="inv-6">
+                <div class="investigacion">
+                    <h1>Ejemplo</h1>
+                    <h2>IF-ELSE</h2>
+                    <p>En cualquier lenguaje de programación existen sentencias que se cumplen si cumplen
+                        alguna condición previamente definida. Imaginemos un escenario donde el usuario introduce un nombre (cadena ó
+                        STRING) en el programa. En COBOL, ACCEPT se usa para introducir datos.</p>
+                    <div class="code-info">
+                        <code>*> INTRODUCIR DATOS CON 'ACCEPT'
+                            <br>DISPLAY 'INTRODUCE NOMBRE:'
+                            <br>ACCEPT WS-NOMBRE
+                            <br>
+                            <br>ㅤIF WS-NOMBRE EQUAL "ALFIE" THEN
+                            <br>DISPLAY 'HOLA, 'WS-NOMBRE
+                            <br>ㅤELSE
+                            <br>DISPLAY 'BIENVENIDO, 'WS-NOMBRE
+                            <br>ㅤEND-IF.</code>
+                    </div>
+                    <p><b>Nota</b>: Usamos PICTURE X(10) para definir una variable alfanumérica.</p>
+                    <div class="code-info">
+                        <code>*> STORAGE
+                            <br>DATA DIVISION.
+                            <br>ㅤWORKING-STORAGE SECTION.
+                            <br>ㅤ*> DEFINIR UNA VARIABLE 'STRING'
+                            <br>ㅤ01 WS-NOMBRE PICTURE X(10).</code>
+                    </div>
+                    <p>Este sería el programa completo:</p>
+                    <h2>condicional.cbl</h2>
+                    <div class="code-info">
+                        <code>IDENTIFICATION DIVISION.
+                            <br>PROGRAM-ID. TEST6.
+                            <br>AUTHOR ALQUIMISTA DE CÓDIGO.
+                            <br>INSTALLATION. ALQUIMISTA DE CÓDIGO.
+                            <br>DATE-WRITTEN. 25/06/19.
+                            <br>DATE-COMPILED.
+                            <br>SECURITY. NO ES CONFIDENCIAL.
+                            <br>
+                            <br>
+                            <br>DATA DIVISION.
+                            <br>ㅤWORKING-STORAGE SECTION.
+                            <br>ㅤ01 WS-NOMBRE PICTURE X(10).
+                            <br>
+                            <br>*> MAIN DEL PROGRAMA 
+                            <br>PROCEDURE DIVISION.
+                            <br>ㅤMAIN.
+                            <br>ㅤDISPLAY 'INTRODUCE NOMBRE:'
+                            <br>ㅤACCEPT WS-NOMBRE
+                            <br>
+                            <br>ㅤF WS-NOMBRE EQUAL "FERNANDO" THEN
+                            <br>DISPLAY 'HOLA, 'WS-NOMBRE
+                            <br>ㅤELSE
+                            <br>DISPLAY 'BIENVENIDO, 'WS-NOMBRE
+                            <br>ㅤEND-IF.
+                            <br>
+                            <br>STOP RUN.</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="botones">
+            <a href="investigaciones.html"><button><span></span>REGRESAR</button></a>
+            <a href="index.html"><button><span></span>INICIO</button></a>
+            <a href="trabajos.html"><button><span></span>TRABAJOS</button></a>
+        </div>
+    </footer>
+</body>
+</html>

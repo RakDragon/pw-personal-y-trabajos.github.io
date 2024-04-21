@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/investigacion5.css">
+    <link rel="shortcut icon" href="icon/lupa.png" type="image/x-icon">
+    <title>Investigación #5</title>
+</head>
+
+<body>
+    <nav>
+        <h1>INICIO • TRABAJOS • INVESTIGACIONES • <i class="seccion_investigacion-5">INVESTIGACIÓN #5</i></h1>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="indices">
+                <div class="info-secciones">
+                    <h1>Secciones</h1>
+                    <p><a href="#titulo-descrip">• Investigación</a></p>
+                    <p><a href="#inv-1">• Símbolos</a></p>
+                    <p><a href="#inv-2">• Sintaxis</a></p>
+                    <p><a href="#inv-3">• Esqueleto</a></p>
+                    <p><a href="#inv-4">• Aplicación</a></p>
+                    <p><a href="#inv-5">• Paradigma</a></p>
+                    <p><a href="#inv-6">• Ejemplo</a></p>
+                    <hr>
+                    <p><a href="investigacion6.html">• Siguiente</a></p>
+                    <p><a href="investigacion4.html">• Atrás</a></p>
+                    <hr>
+                    <p><a href="#">• Ir al principio</a></p>
+                    <p><a href="#footer">• Ir al final</a></p>
+                </div>
+            </div>
+
+            <div class="post" id="titulo-descrip">
+                <div class="titulo-descrip">
+                    <h1>Investigación #5:</h1>
+                    <h2>Investigar para el lenguaje 'Prolog' sus símbolos, sintaxis, esqueleto de los programas,
+                        aplicación a descargar, paradigma y un ejemplo escrito en dicho lenguaje.</h2>
+                </div>
+            </div>
+
+            <div class="post" id="inv-1">
+                <div class="investigacion">
+                    <h1>Símbolos</h1>
+                    <h2>Operadores</h2>
+                    <p>Los operadores de Prolog están divididos en dos clases: aritméticos y relacionales</p>
+                    <h2>Aritméticos</h2>
+                    <p>Todas las versiones de Prolog soportan los siguientes operadores aritméticos, listados en el
+                        orden de prioridad de ejecución.
+                    <ul>
+                        <li>+ --> SUMA</li>
+                        <li>- --> RESTA</li>
+                        <li>* --> MULTIPLICACIÓN</li>
+                        <li>/ --> DIVISIÓN</li>
+                        <li>// --> DIVISION ENTERA</li>
+                        <li>MOD --> RESIDUO</li>
+                        <li>^ --> POTENCIA</li>
+                    </ul>
+                    </p>
+                    <p>Los paréntesis se pueden utilizar para dar preferencia de ejecución en una expresión compuesta.
+                        Prolog utiliza la precedencia de operadores con la regla de la mano izquierda.</p>
+                    <p>A continuación se muestran algunas operaciones más complejas que PROLOG provee:</p>
+                    <ul>
+                        <li><b>Operación</b>: Sqrt(X)</br><b>Descripción</b>: Calcula la raíz cuadrada de la variable
+                        </li>
+                        <li><b>Operación</b>: log(X)</br><b>Descripción</b>: Calcula el logaritmo de X</li>
+                        <li><b>Operación</b>: ln(X)</br><b>Descripción</b>: Calcula el logaritmo natural de X</li>
+                        <li><b>Operación</b>: abs(B)</br><b>Descripción</b>: Regresa el valor absoluto de B</li>
+                        <li><b>Operación</b>: sin(T)</br><b>Descripción</b>: Seno de T</li>
+                        <li><b>Operación</b>: cos(A)</br><b>Descripción</b>: Coseno de A</li>
+                        <li><b>Operación</b>: tan(C)</br><b>Descripción</b>: Tangente de C</li>
+                    </ul>
+                    <h2>Relacionales</h2>
+                    <p>Prolog soporta los siguientes operadores relacionales:</p>
+                    <ul>
+                        <li>= --> IGUAL QUE</li>
+                        <li>> --> MAYOR QUE</li>
+                        <li>>= --> MAYOR O IGUAL QUE</li>
+                        <li>>= --> MENOR O IGUAL QUE</li>
+                        <li>
+                            <> --> DESIGUAL QUE
+                        </li>
+                        <li>=/= --> DIFERENTE QUE</li>
+                        <li>is --> EVALUADOR DE EXPRESIÓN</li>
+                        <li>seed --> GENERADOR DE NÚMEROS ALEATORIOS</li>
+                    </ul>
+                    <p>Cuando dos objetos que son símbolos o cadenas de caracteres son comparados, los caracteres son
+                        convertidos a su equivalente ASCII. El valor de cada carácter es examinado a partir del operador
+                        relacional, de izquierda a derecha.</p>
+                </div>
+            </div>
+
+            <div class="post" id="inv-2">
+                <div class="investigacion">
+                    <h1>Sintaxis</h1>
+                    <li class="li-caracteristica">Conjunto de caracteres válidos (máx. 128; ASCII 7 bits):</li>
+                    <ul>
+                        <li>Mayúsculas [A-Z]</li>
+                        <li>Minúsculas [a-z]</li>
+                        <li>Dígitos [0-9]</li>
+                        <li>Caracteres especiales: + - * / ^ <> ~ : ; . _ ? \ ( ) [ ]</li>
+                    </ul>
+                    <li class="li-caracteristica">Se distinguen imprimibles de no imprimibles</li>
+                    <li class="li-caracteristica">Un programa PROLOG es una sucesión de términos:</li>
+                    <ul>
+                        <li>Átomo</li>
+                        <li>Números</li>
+                        <li>Variables</li>
+                        <li>Estructuras</li>
+                    </ul>
+                    <p>La sintaxis del lenguaje de Prolog es usado habitualmente en el campo de la Inteligencia Artificial.</p>
+                </div>
+            </div>
+
+            <div class="post" id="inv-3">
+                <div class="investigacion">
+                    <h1>Esqueleto de los programas</h1>
+                    <p>Un programa en prolog está compuesto por cláusulas. Las cláusulas son la base del programa,
+                        están conformadas por hechos y reglas . El conjunto de hechos y reglas forman el
+                        conocimiento base del programa, mediante el cual podremos realizar consultas e inferir datos.</p>
+                    <p><b>Hechos</b>: Un hecho, en PROLOG, es una relación entre objetos. Para nosotros es una
+                        afirmación directa entre uno o varios objetos, donde debemos tomar en cuenta la siguiente
+                        formato:</p>
+                    <ul>
+                        <p>Predicado(sujeto(‘,’||sujeto)*)</p>
+                    </ul>
+                    <h2>Ejemplos</h2>
+                    <ul>
+                        <p>le_gusta_a(juan,maria).
+                            valioso(oro).
+                            tiene(juan,libro).
+                            da(juan,libro,maria).</p>                    
+                    </ul>
+                    <p><b>Reglas</b>:  Una regla, en PROLOG, es una sentencia condicional. Es decir sin un objeto cumple
+                        cierta característica, se obliga a que tenga otra relación y debemos tener en cuenta el siguiente
+                        formato:</p>
+                    <ul>
+                        <p>Conclusión condicional ParteCondicional </br> *condicional : “:-”</p>
+                    </ul>
+                    <p>Si desea prácticar en este lenguaje, le dejaremos a continuación el IDE de desarrollo de Prolog.</p>
+                </div>
+            </div>
+
+            <div class="post" id="inv-4">
+                <div class="investigacion">
+                    <h1>Aplicación a descargar para editar y ejecutar</h1>
+                    <div class="programa">
+                        <img src="img/logoprolog.png" alt="Logo de Swig Prolog">
+                        <a href="https://www.swi-prolog.org/download/stable" target="_blank">SWI Prolog</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post" id="inv-5">
+                <div class="investigacion">
+                    <h1>Paradigma</h1>
+                    <p>El lenguaje Prolog pertenece a la <b>Paradigma Declarativo</b> de <b>Programación Lógica</b>.</p>
+                </div>
+            </div>
+
+            <div class="post" id="inv-6">
+                <div class="investigacion">
+                    <h1>Ejemplo</h1>
+                    <p>A continuación, se muestra un ejemplo básico de un programa escrito en el lenguaje <b>Prolog</b>.</p>
+                    <div class="ejemplo-programa">
+                        <img src="img/prolog_ejemplo_programa.png" alt="Ejemplo de un programa escrito en lenguaje Prolog">
+                    </div>                  
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="botones">
+            <a href="investigaciones.html"><button><span></span>REGRESAR</button></a>
+            <a href="index.html"><button><span></span>INICIO</button></a>
+            <a href="trabajos.html"><button><span></span>TRABAJOS</button></a>
+        </div>
+    </footer>
+</body>
+
+</html>

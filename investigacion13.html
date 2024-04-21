@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/investigacion13.css">
+    <link rel="shortcut icon" href="icon/lupa.png" type="image/x-icon">
+    <title>Investigación #13</title>
+</head>
+<body>
+    <nav>
+        <h1>INICIO • TRABAJOS • INVESTIGACIONES • <i class="seccion_investigacion">INVESTIGACIÓN #13</i></h1>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="indices">
+                <div class="info-secciones">
+                    <h1>Secciones</h1>
+                    <p><a href="#titulo-descrip">• Investigación</a></p>
+                    <p><a href="#inv-1">• Símbolos</a></p>
+                    <p><a href="#inv-2">• Sintaxis</a></p>
+                    <p><a href="#inv-3">• Esqueleto</a></p>
+                    <p><a href="#inv-4">• Aplicación</a></p>
+                    <p><a href="#inv-5">• Paradigma</a></p>
+                    <p><a href="#inv-6">• Ejemplo</a></p>
+                    <hr>
+                    <p><a href="investigacion14.html">• Siguiente</a></p>
+                    <p><a href="investigacion12.html">• Atrás</a></p>
+                    <hr>
+                    <p><a href="#">• Ir al principio</a></p>
+                    <p><a href="#footer">• Ir al final</a></p>
+                </div>
+            </div>
+
+            <div class="post" id="titulo-descrip">
+                <div class="titulo-descrip">
+                    <h1>Investigación #13:</h1>
+                    <h2>Investigar para el lenguaje 'SQL' sus símbolos, sintaxis, esqueleto de los programas, aplicación a descargar, paradigma
+                        y un ejemplo escrito en dicho lenguaje.</h2>
+                </div>
+            </div>
+
+            <div class="post" id="inv-1">
+                <div class="investigacion">
+                    <h1>Símbolos</h1>
+                    <p>Los símbolos son las unidades sintácticas básicas de SQL. Un símbolo es una secuencia de uno o varios caracteres.</p>
+                    <p>Un símbolo no puede contener caracteres en blanco, a menos que sea una constante de tipo serie o un identificador
+                        delimitado, que pueden contener blancos.</p>
+                    <p>Los símbolos se clasifican en ordinarios y delimitadores:</p>
+                    <ul>
+                        <li>Un símbolo ordinario es una constante numérica, un identificador ordinario, un identificador del lenguaje principal o una palabra clave.
+                            Ejemplos</li>
+                    </ul>
+                    <div class="code-info">
+                        <code>   1        .1        +2        SELECT        E        3</code>
+                    </div>
+                    <ul>
+                        <li>Un símbolo delimitador es una constante de tipo serie, un identificador delimitado, un símbolo de operador o
+                            cualquier carácter especial mostrado en los diagramas de sintaxis. Un signo de interrogación también es un símbolo
+                            delimitador cuando actúa como marcador de parámetro.</li>
+                    </ul>
+                    <div class="code-info">
+                        <code>   ,        'serie'        "fld1"        =        .</code>
+                    </div>
+                    <h2>Espacios</h2>
+                    <p>Un espacio es una secuencia de uno o varios caracteres en blanco. Los símbolos que no son constantes de tipo serie ni
+                        identificadores delimitados no deben incluir ningún espacio. Los símbolos pueden ir seguidos de un espacio. Cada
+                        símbolo ordinario debe ir seguido por un espacio o por un símbolo delimitador si lo permite la sintaxis.</p>
+                    <h2>Comentarios</h2>
+                    <p>Los comentarios de SQL son compuestos (empiezan por /* y finalizan por */) o simples (empiezan por dos guiones
+                        consecutivos y finalizan con el final de línea). Las sentencias de SQL estático pueden incluir comentarios SQL o del
+                        lenguaje principal. Se pueden especificar comentarios dondequiera que se pueda especificar un espacio, excepto
+                        dentro de un símbolo delimitador o entre las palabras clave EXEC y SQL.</p>
+                    <h2>Sensibilidad a mayúsculas y minúsculas</h2>
+                    <p>Los símbolos pueden incluir letras minúsculas, pero las letras minúsculas de un símbolo ordinario se convierten a
+                        mayúsculas, excepto en las variables del lenguaje principal en C, que tienen identificadores sensibles a las
+                        mayúsculas y minúsculas. Los símbolos delimitadores no se convierten nunca a mayúsculas. Por lo tanto, la sentencia:</p>
+                        <div class="code-info">
+                            <code>select * from EMPLOYEE where lastname = 'Smith';</code>
+                        </div>
+                    <p>después de la conversión, es equivalente a:</p>
+                    <div class="code-info">
+                        <code>SELECT * FROM EMPLOYEE WHERE LASTNAME = 'Smith';</code>
+                    </div>
+                    <p>Las letras alfabéticas de múltiples bytes no se convierten a mayúsculas. Los caracteres de un solo byte (de la "a" a
+                        la "z") sí se convierten a mayúsculas.</p>
+                </div>
+            </div>
+
+            <div class="post" id="inv-2">
+                <div class="investigacion">
+                    <h1>Sintaxis</h1>
+                    <h2>Cláusulas SQL</h2>
+                    <p>Como una frase, una instrucción SQL tiene cláusulas. Cada cláusula realiza una función de la instrucción SQL. Algunas
+                        cláusulas son necesarias en una instrucción SELECT. En la siguiente tabla, se enumeran las cláusulas SQL más
+                        comunes.</p>
+                    <ul>
+                        <li><b>Cláusula SQL</b>: SELECT<br><b>Función</b>: Muestra una lista de los campos que contienen datos de
+                            interés.<br><b>Obligatorio</b>: Sí</li>
+                        <li><b>Cláusula SQL</b>: FROM<br><b>Función</b>: Muestra las tablas que contienen los campos de la cláusula
+                            SELECT.<br><b>Obligatorio</b>: Sí</li>
+                        <li><b>Cláusula SQL</b>: WHERE<br><b>Función</b>: Especifica los criterios de campo que cada registro debe cumplir
+                            para poder ser incluido en los resultados.<br><b>Obligatorio</b>: No</li>
+                        <li><b>Cláusula SQL</b>: ORDER BY<br><b>Función</b>: Especifica la forma de ordenar los
+                            resultados.<br><b>Obligatorio</b>: No</li>
+                        <li><b>Cláusula SQL</b>: GROUP BY<br><b>Función</b>: En una instrucción SQL que contiene funciones de agregado,
+                            muestra los campos que no se resumen en la cláusula SELECT.<br><b>Obligatorio</b>: Solo si están estos campos</li>
+                        <li><b>Cláusula SQL</b>: HAVING<br><b>Función</b>: En una instrucción SQL que contiene funciones de agregado,
+                            especifica las condiciones que se aplican a los campos que se resumen en la instrucción
+                            SELECT.<br><b>Obligatorio</b>: No</li>
+                    </ul>
+
+                    <h2>Términos de SQL</h2>
+                    <p>Cada cláusula SQL se compone de términos, comparables a elementos de la oración. En la siguiente tabla, se enumeran los tipos de términos de SQL.</p>
+                    <ul>
+                        <li><b>Término de SQL</b>: identificador<br><b>Elemento de la oración comparable</b>:
+                            sustantivo<br><b>Definición</b>: Nombre que se usa para identificar un objeto de la base de datos, como el
+                            nombre de un campo.<br><b>Ejemplo</b>: Clientes.[Número de teléfono]</li>
+                        <li><b>Término de SQL</b>: operador<br><b>Elemento de la oración comparable</b>: verbo o
+                            adverbio<br><b>Definición</b>: Palabra clave que representa o modifica una acción.<br><b>Ejemplo</b>: AS</li>
+                        <li><b>Término de SQL</b>: constante<br><b>Elemento de la oración comparable</b>: sustantivo<br><b>Definición</b>:
+                            Valor que no cambia, como un número o un valor nulo (NULL).<br><b>Ejemplo</b>: 42</li>
+                        <li><b>Término de SQL</b>: expresión<br><b>Elemento de la oración comparable</b>: adjetivo<br><b>Definición</b>:
+                            Combinación de identificadores, operadores, constantes y funciones que se evalúa como un valor
+                            único.<br><b>Ejemplo</b>: > = Productos.[Precio por unidad]</li>
+                    </ul>
+
+                    <h2>Cláusula SELECT</h2>
+                    <div class="code-info">
+                        <code>SELECT [E-mail Address], Company</code>
+                    </div>
+                    <p>Esta es la cláusula SELECT. Se compone de un operador (SELECT) seguido de dos identificadores ([Dirección de correo electrónico] y Empresa).</p>
+                    <p>Si un identificador contiene espacios o caracteres especiales (como "Dirección de correo electrónico"), se debe escribir entre corchetes.</p>
+                    <p>Una cláusula SELECT no tiene que mencionar las tablas que contienen los campos y no puede especificar las condiciones
+                        que deben cumplir los datos que se van a incluir.</p>
+                    <p>La cláusula SELECT siempre aparece antes que la cláusula FROM en una instrucción SELECT.</p>
+
+                    <h2>Cláusula FROM</h2>
+                    <div class="code-info">
+                        <code>FROM Contacts</code>
+                    </div>
+                    <p>Esta es la cláusula FROM. Se compone de un operador (FROM) seguido de un identificador (Contactos).</p>
+                    <p>Una cláusula FROM no enumera los campos que se van a seleccionar.</p>
+
+                    <h2>Cláusula WHERE</h2>
+                    <div class="code-info">
+                        <code>WHERE City="Seattle"</code>
+                    </div>
+                    <p>Esta es la cláusula WHERE. Se compone de un operador (WHERE) seguido de un identificador (Ciudad="Seattle").</p>
+                    <ul>
+                        <p><b></b>Nota: A diferencia de las cláusulas SELECT y FROM, la cláusula WHERE no es un elemento obligatorio en una instrucción SELECT.</p>
+                    </ul>
+
+                    <h2>Ordenar los resultados: ORDER BY</h2>
+                    <p>Una cláusula ORDER BY contiene una lista de los campos que quiere usar para ordenar, en el mismo orden en el que
+                        quiere aplicar las operaciones de ordenación.</p>
+                    <p>Por ejemplo, suponga que quiere ordenar los resultados por el valor del campo Empresa en orden descendente y, en caso
+                        de que haya registros con el mismo valor para Empresa, quiere ordenarlos además por el valor indicado en el campo
+                        Dirección de correo electrónico en orden ascendente. La cláusula ORDER BY podría ser similar a la siguiente:</p>
+                    <div class="code-info">
+                        <code>ORDER BY Company DESC, [E-mail Address]</code>
+                    </div>
+
+                    <h2>Trabajar con datos resumidos: GROUP BY y HAVING</h2>
+                    <p>A veces quiere trabajar con datos resumidos, como las ventas totales en un mes o los elementos más caros de un
+                        inventario. Para ello, aplique una función de agregado a un campo en la cláusula SELECT. Por ejemplo, si quiere que
+                        la consulta muestre el recuento de las direcciones de correo electrónico enumeradas de cada empresa, la cláusula
+                        SELECT podría ser similar a la siguiente:</p>
+                        <div class="code-info">
+                            <code>SELECT COUNT([E-mail Address]), Company</code>
+                        </div>
+                    <p>Las funciones de agregado que puede usar dependen del tipo de datos que haya en el campo o la expresión que quiera usar.</p>
+                    
+                    <h2>Especificar campos que no se usan en una función de agregado: Cláusula GROUP BY</h2>
+                    <p>Al usar funciones de agregado, normalmente debe crear también una cláusula GROUP BY. Una cláusula GROUP BY enumera
+                        todos los campos a los que no se aplica una función de agregado. Si aplica funciones de agregado a todos los campos
+                        en una consulta, no tendrá que crear la cláusula GROUP BY.</p>
+                    <p>Una cláusula GROUP BY va inmediatamente después de la cláusula WHERE, o la cláusula FROM si no hay ninguna cláusula
+                        WHERE. Una cláusula GROUP BY enumera los campos tal y como aparecen en la cláusula SELECT.</p>
+                    <p>Por ejemplo, siguiendo con el ejemplo anterior, si la cláusula SELECT aplica una función de agregado a [Dirección de
+                        correo electrónico] pero no a Empresa, la cláusula GROUP BY sería similar a la siguiente:</p>
+                    <div class="code-info">
+                        <code>GROUP BY Company</code>
+                    </div>
+
+                    <h2>Limitar los valores de agregado mediante los criterios de agrupación: cláusula HAVING</h2>
+                    <p>Si quiere usar criterios para limitar los resultados, pero el campo al que quiere aplicar los criterios se usa en una
+                        función de agregado, no puede usar una cláusula WHERE. En su lugar, use una cláusula HAVING. Una cláusula HAVING
+                        funciona como una cláusula WHERE, pero se usa para los datos agregados.</p>
+                    <p>Por ejemplo, suponga que usa la función COUNT (que devuelve un número de filas) con el primer campo de la cláusula SELECT:</p>
+                    <div class="code-info">
+                        <code>SELECT COUNT([E-mail Address]), Company</code>
+                    </div>
+                    <p>Si quiere que la consulta restrinja los resultados según el valor de esa función COUNT, no puede usar un criterio
+                        para ese campo en la cláusula WHERE. En su lugar, coloque los criterios en una cláusula HAVING. Por ejemplo, si solo
+                        quiere que la consulta devuelva filas si hay más de una dirección de correo electrónico asociada a la empresa, la
+                        cláusula HAVING podría ser similar a la siguiente:</p>
+                    <div class="code-info">
+                        <code>HAVING COUNT([E-mail Address])>1</code>
+                     </div>
+                </div>
+            </div>
+
+            <div class="post" id="inv-3">
+                <div class="investigacion">
+                    <h1>Esqueleto de los programas</h1>
+                    <p>La estructura básica de una expresión SQL consiste en tres cláusulas: select, from y where.</p>
+                    <ul>
+                        <p>La cláusula select corresponde a la operación proyección del álgebra relacional.
+                            Se usa para listar los atributos deseados del resultado de una consulta</p>
+                        <p>La cláusula from corresponde a la operación producto cartesiano del álgebra
+                            relacional. Lista las relaciones que deben ser analizadas en la evaluación de la
+                            expresión.</p>
+                        <p>La cláusula where corresponde al predicado selección del álgebra relacional. Es
+                            un predicado que engloba a los atributos de las relaciones que aparecen en la
+                            cláusula from.</p>
+                    </ul>
+                    <p>Una consulta típica en SQL tiene la forma
+                        <br>select A1, A2,…, An from r1, r2,…, rm where P</p>
+                    <p>Cada Ai representa un atributo, y cada ri una relación.</p>
+                    <p>P es un predicado. La consulta es equivalente a la expresión del álgebra relacional
+                        <br>Π A1, A2,…, An (σP (r1 × r2 ×… × rm ))</p>
+                    <div class="esqueleto-programa"></div>
+                </div>
+            </div>
+
+            <div class="post" id="inv-4">
+                <div class="investigacion">
+                    <h1>Aplicación a descargar para editar y ejecutar</h1>
+                    <p>SQL Server Management Studio (SSMS) es un entorno integrado para administrar cualquier infraestructura de SQL, desde
+                        SQL Server hasta Azure SQL Database. SSMS proporciona herramientas para configurar, monitorear y administrar
+                        instancias de SQL Server y bases de datos.</p>
+                    <div class="programa">
+                        <img src="img/sqlserver_programa.png" alt="Logo de SQL Server Management Studio">
+                        <a href="https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16" target="_blank">SQL Server Management Studio</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post" id="inv-5">
+                <div class="investigacion">
+                    <h1>Paradigma</h1>
+                    <p>SQL entra a la categoría de lenguaje <b>multiparadigma</b>.</p>
+                </div>
+            </div>
+
+            <div class="post" id="inv-6">
+                <div class="investigacion">
+                    <h1>Ejemplo</h1>
+                    <p>Se ilustran imágenes de planeación y creación de bases de datos en SQL.</p>
+                    <div class="ejemplo-programa">
+                        <img src="img/sql_ejemplo_programa.png" alt="Ejemplo de creación de bases de datos en SQL">                       
+                    </div>
+                    <div class="ejemplo-programa-2">
+                        <img src="img/sql_ejemplo2_programa.png" alt="Ejemplo de creación de bases de datos en SQL">
+                    </div>                  
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="botones">
+            <a href="investigaciones.html"><button><span></span>REGRESAR</button></a>
+            <a href="index.html"><button><span></span>INICIO</button></a>
+            <a href="trabajos.html"><button><span></span>TRABAJOS</button></a>
+        </div>
+    </footer>
+</body>
+</html>

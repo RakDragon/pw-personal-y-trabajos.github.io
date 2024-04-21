@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/programa7.css">
+    <link rel="shortcut icon" href="icon/java.ico" type="image/x-icon">
+    <title>Programa #7</title>
+</head>
+<body>
+    <nav>
+        <h1>INICIO • TRABAJOS • PROGRAMAS EN JAVA • <i class="seccion_investigacion-1">PROGRAMA #7</i></h1>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="indices">
+                <div class="info-secciones">
+                    <h1>Secciones</h1>
+                    <p><a href="#titulo-descrip">• Programa</a></p>
+                    <p><a href="#codigo-java">• Código</a></p>
+                    <hr>
+                    <p><a href="programa6.html">• Anterior</a></p>
+                    <hr>
+                    <p><a href="#">• Ir al principio</a></p>
+                    <p><a href="#footer">• Ir al final</a></p>
+                </div>
+            </div>
+
+            <div class="post" id="titulo-descrip">
+                <div class="titulo-descrip">
+                    <h1>Programa #7: <i>Multiplicación de Matrices</i></h1>
+                    <h2>Elaborar un programa en JAVA que calcule la multiplicación de dos matrices que ingrese el usuario.<br>(Nota: Validar lo que sea necesario para poder realizar la multiplicación de matrices.)</h2>
+                </div>
+            </div>
+
+            <div class="post" id="codigo-java">
+                <div>
+                    <h1>Código:</h1>
+                    <pre class="code-info">import java.util.Scanner;
+
+public class tarea22 {
+
+    public static void main(String[] args) {
+
+        int[][] matrix1;
+        int[][] matrix2;
+        int[][] matrixResult;
+        int rows;
+        int columns;
+        int rows2;
+        int columns2;
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.println("Multiplicación de matrices");
+            System.out.println("------------------------");
+
+            System.out.print("Introduce el número de filas de la primera matriz: ");
+            rows = input.nextInt();
+            System.out.print("Introduce el número de columnas de la primera matriz: ");
+            columns = input.nextInt();
+
+            System.out.print("Introduce el número de filas de la segunda matriz: ");
+            rows2 = input.nextInt();
+            System.out.print("Introduce el número de columnas de la segunda matriz: ");
+            columns2 = input.nextInt();
+
+            if (columns != rows2) {
+                System.out.println("La multiplicación de matrices no se puede realizar
+                porque el número de columnas de la primera matriz no coincide con el número
+                de filas de la segunda.");
+            } else {
+
+                matrix1 = new int[rows][columns];
+                matrix2 = new int[rows2][columns2];
+                matrixResult = new int[rows][columns2];
+
+                System.out.println("Introduce los elementos de la primera matriz:");
+                for (int i = 0; i < rows; i++) {
+                    for (int j = 0; j < columns; j++) {
+                        System.out.print("[" + (i) + "][" + (j) + "]: ");
+                        matrix1[i][j] = input.nextInt();
+                    }
+                }
+
+                System.out.println("Introduce los elementos de la segunda matriz:");
+                for (int i = 0; i < rows2; i++) {
+                    for (int j = 0; j < columns2; j++) {
+                        System.out.print("[" + (i) + "][" + (j) + "]: ");
+                        matrix2[i][j] = input.nextInt();
+                    }
+                }
+
+                System.out.println("La matriz resultante de la multiplicación de las
+                matrices anteriores es:");
+                for (int i = 0; i < rows; i++) {
+                    for (int j = 0; j < columns2; j++) {
+                        for (int k = 0; k < columns; k++) {
+                            matrixResult[i][j] += matrix1[i][k] * matrix2[k][j];
+                        }
+                        System.out.print(matrixResult[i][j] + " ");
+                    }
+                    System.out.println();
+                }
+            }
+        }
+    }
+}</pre>                         
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="botones">
+            <a href="programas_en_java.html"><button><span></span>REGRESAR</button></a>
+            <a href="index.html"><button><span></span>INICIO</button></a>
+            <a href="trabajos.html"><button><span></span>TRABAJOS</button></a>
+        </div>
+    </footer>
+</body>
+</html>

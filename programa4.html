@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/programa4.css">
+    <link rel="shortcut icon" href="icon/java.ico" type="image/x-icon">
+    <title>Programa #4</title>
+</head>
+<body>
+    <nav>
+        <h1>INICIO • TRABAJOS • PROGRAMAS EN JAVA • <i class="seccion_investigacion-1">PROGRAMA #4</i></h1>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="indices">
+                <div class="info-secciones">
+                    <h1>Secciones</h1>
+                    <p><a href="#titulo-descrip">• Programa</a></p>
+                    <p><a href="#codigo-java">• Código</a></p>
+                    <hr>
+                    <p><a href="programa5.html">• Siguiente</a></p>
+                    <p><a href="programa3.html">• Anterior</a></p>
+                    <hr>
+                    <p><a href="#">• Ir al principio</a></p>
+                    <p><a href="#footer">• Ir al final</a></p>
+                </div>
+            </div>
+
+            <div class="post" id="titulo-descrip">
+                <div class="titulo-descrip">
+                    <h1>Programa #4: <i>Búsqueda en Vector</i></h1>
+                    <h2>Elaborar un programa en JAVA que realice una búsqueda de un número en un vector, mostrando solamente un mensaje
+                        indicando cuántas veces apareció el número, además de imprimir el vector.</h2>
+                    <ul>
+                        <li>Ejemplo:</li>
+                    </ul>
+                    <div class="code-info">
+                        <code>Valor a buscar: 4<br>
+                        "El número 4 aparece 2 veces en el vector:"<br>
+                        (1  4  7  9  21  4  0  2  5  2)</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post" id="codigo-java">
+                <div>
+                    <h1>Código:</h1>
+                    <pre class="code-info">import java.util.Scanner;
+
+public class tarea19 {
+ 
+  public static void main(String[] args) {
+    try (Scanner s = new Scanner(System.in)) {
+        int[] n = new int[10];
+        int buscar;
+
+        System.out.print("Para el siguiente vector, debe de introducir 10 dígitos
+        (se recomienda que digite por lo menos un número y que este se repita 2 o
+        más veces).\n");
+        // Leemos el array
+        for(int i=0;i<10;i++) {
+          System.out.print("- Introduzca el número " + (i+1) + ": ");
+          n[i] = Integer.parseInt(s.nextLine());
+        }
+ 
+        // Leemos el número a buscar
+        System.out.print("Introduzca el número a buscar: ");
+        buscar = Integer.parseInt(s.nextLine());
+ 
+        // Buscamos el número en el array
+        int cuenta = 0;
+        for(int i=0;i<10;i++) {
+          if(n[i] == buscar) {
+            cuenta++;
+          }
+        }
+ 
+        // Mostramos el resultado de la búsqueda
+        System.out.print("- El vector es: ");
+        for(int i=0;i<10;i++) {
+          System.out.print(n[i] + " ");
+        }
+        System.out.println();
+        if(cuenta == 0) {
+          System.out.println("- El número no se encuentra en el vector");
+        } else {
+          System.out.println("- El número " + buscar + " aparece " + cuenta + " veces
+          en el vector.");
+        }
+    } catch (NumberFormatException e) {
+        e.printStackTrace();
+    }
+  }
+}</pre>                                
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="botones">
+            <a href="programas_en_java.html"><button><span></span>REGRESAR</button></a>
+            <a href="index.html"><button><span></span>INICIO</button></a>
+            <a href="trabajos.html"><button><span></span>TRABAJOS</button></a>
+        </div>
+    </footer>
+</body>
+</htm

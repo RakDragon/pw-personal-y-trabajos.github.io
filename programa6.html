@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/programa6.css">
+    <link rel="shortcut icon" href="icon/java.ico" type="image/x-icon">
+    <title>Programa #6</title>
+</head>
+<body>
+    <nav>
+        <h1>INICIO • TRABAJOS • PROGRAMAS EN JAVA • <i class="seccion_investigacion-1">PROGRAMA #6</i></h1>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="indices">
+                <div class="info-secciones">
+                    <h1>Secciones</h1>
+                    <p><a href="#titulo-descrip">• Programa</a></p>
+                    <p><a href="#codigo-java">• Código</a></p>
+                    <hr>
+                    <p><a href="programa7.html">• Siguiente</a></p>
+                    <p><a href="programa5.html">• Anterior</a></p>
+                    <hr>
+                    <p><a href="#">• Ir al principio</a></p>
+                    <p><a href="#footer">• Ir al final</a></p>
+                </div>
+            </div>
+
+            <div class="post" id="titulo-descrip">
+                <div class="titulo-descrip">
+                    <h1>Programa #6: <i>Suma de Matrices</i></h1>
+                    <h2>Elaborar un programa en JAVA que calcule la suma de dos matrices que ingrese el usuario.<br>(Nota: Validar lo que sea necesario para poder realizar la suma de matrices.)</h2>
+                </div>
+            </div>
+
+            <div class="post" id="codigo-java">
+                <div>
+                    <h1>Código:</h1>
+                    <pre class="code-info">import java.util.Scanner;
+
+public class tarea21 {
+ 
+    public static void main(String[] args) {
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.print("Ingrese la cantidad de filas: ");
+            int filas = sc.nextInt();
+            System.out.print("Ingrese la cantidad de columnas: ");
+            int columnas = sc.nextInt();
+            int[][] matriz1 = new int[filas][columnas];
+            int[][] matriz2 = new int[filas][columnas];
+            int[][] matriz3 = new int[filas][columnas];
+            System.out.println("Ingrese los elementos de la matriz 1:");
+            for (int i = 0; i < filas; i++) {
+                for (int j = 0; j < columnas; j++) {
+                    System.out.print("[" + i + "][" + j + "] = ");
+                    matriz1[i][j] = sc.nextInt();
+                }
+            }
+            System.out.println("Ingrese los elementos de la matriz 2:");
+            for (int i = 0; i < filas; i++) {
+                for (int j = 0; j < columnas; j++) {
+                    System.out.print("[" + i + "][" + j + "]= ");
+                    matriz2[i][j] = sc.nextInt();
+                }
+            }
+            for (int i = 0; i < filas; i++) {
+                for (int j = 0; j < columnas; j++) {
+                    matriz3[i][j] = matriz1[i][j] + matriz2[i][j];
+                }
+            }
+            System.out.println("La suma de las dos matrices es:");
+            for (int i = 0; i < filas; i++) {
+                for (int j = 0; j < columnas; j++) {
+                    System.out.print(matriz3[i][j] + " ");
+                }
+                System.out.println();
+            }
+        }
+    }
+} </pre>                                  
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="botones">
+            <a href="programas_en_java.html"><button><span></span>REGRESAR</button></a>
+            <a href="index.html"><button><span></span>INICIO</button></a>
+            <a href="trabajos.html"><button><span></span>TRABAJOS</button></a>
+        </div>
+    </footer>
+</body>
+</htm

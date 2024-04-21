@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/investigacion15.css">
+    <link rel="shortcut icon" href="icon/lupa.png" type="image/x-icon">
+    <title>Investigación #15</title>
+</head>
+<body>
+    <nav>
+        <h1>INICIO • TRABAJOS • INVESTIGACIONES • <i class="seccion_investigacion">INVESTIGACIÓN #15</i></h1>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="indices">
+                <div class="info-secciones">
+                    <h1>Secciones</h1>
+                    <p><a href="#titulo-descrip">• Investigación</a></p>
+                    <p><a href="#inv-1">• Símbolos</a></p>
+                    <p><a href="#inv-2">• Sintaxis</a></p>
+                    <p><a href="#inv-3">• Esqueleto</a></p>
+                    <p><a href="#inv-4">• Aplicación</a></p>
+                    <p><a href="#inv-5">• Paradigma</a></p>
+                    <p><a href="#inv-6">• Ejemplo</a></p>
+                    <hr>
+                    <p><a href="investigacion14.html">• Atrás</a></p>
+                    <hr>
+                    <p><a href="#">• Ir al principio</a></p>
+                    <p><a href="#footer">• Ir al final</a></p>
+                </div>
+            </div>
+
+            <div class="post" id="titulo-descrip">
+                <div class="titulo-descrip">
+                    <h1>Investigación #15:</h1>
+                    <h2>Investigar para el lenguaje 'PHP' sus símbolos, sintaxis, esqueleto de los programas, aplicación a descargar, paradigma
+                        y un ejemplo escrito en dicho lenguaje.</h2>
+                </div>
+            </div>
+
+            <div class="post" id="inv-1">
+                <div class="investigacion">
+                    <h1>Símbolos</h1>
+                    <h2>Precedencia de operadores</h2>
+                    <p>Los operadores son los símbolos que construyen las reglas de PHP, uno de ellos es la precedencia de los operadores.</p>
+                    <p>En PHP sigue casi las mismas reglas que en matemáticas, por ejemplo: multiplicación y división preceden a suma y
+                        resta, los paréntesis fuerzan una precedencia, etc.</p>
+                    <p>Cuando tienen la misma precedencia, su asociatividad decide cómo ordenar los operadores. Por ejemplo el operador suma
+                        + tiene asociatividad izquierda, por lo que la operación 1 + 2 + 3 sumará primero 1 y 2, y después 3 => (1 + 2) + 3.
+                        Por el contrario, el operador = tiene asociatividad derecha, por lo que $x = $y = $z se agrupa de forma $x = ($y =
+                        $z).</p>
+                    <p>Lista de operadores ordenados por precedencia:</p>
+                    <div class="simbolos-programa">
+                        <img src="img/php_simbolos_programa.png" alt="Ilustración de los simbolos de PHP">
+                    </div>
+
+                    <h2>Operadores aritméticos</h2>
+                    <p>Otros símbolos serían los operadores aritméticos en PHP, son los mismos que en las matemáticas:</p>
+                    <div class="simbolos-programa-2">
+                        <img src="img/php_simbolos2_programa_.png" alt="Ilustración de los simbolos de PHP">
+                    </div>
+                    <p>*División devuelve un (int) si $x y $y son divisibles, o (float) si no lo son.</p>
+                </div>
+            </div>
+
+            <div class="post" id="inv-2">
+                <div class="investigacion">
+                    <h1>Sintaxis</h1>
+                    <li class="li-caracteristica">Este lenguaje se considera de fácil aprendizaje porque en su desarrollo se simplificaron
+                        diferentes especificaciones tales como la definición de variables primitivas, lo cual se hace visible al usar PHP
+                        arrays.</li>
+                    <li class="li-caracteristica">El lenguaje se orienta al desarrollo de aplicaciones web de forma dinámica que puedan
+                        acceder a datos almacenados en una base.</li>
+                    <li class="li-caracteristica">Puede conectarse con casi todos los motores de base de datos que se usan actualmente, su
+                        conectividad se destaca con PostgreSQL y MySQL.</li>
+                    <li class="li-caracteristica">El código fuente escrito en este lenguaje es invisible para el cliente y para el navegador
+                        web porque el servidor es quien tiene a su cargo la ejecución del código y el envío del resultado HTM. hacia el
+                        navegador. Esto permite que la programación en PHP sea confiable y segura.</li>
+                    <li class="li-caracteristica">Tiene mucha documentación en el sitio web oficial, en las cuales las más destacadas
+                        consisten en que las funciones del sistema se ejemplifican y se explican en un archivo único de ayuda.</li>
+                    <li class="li-caracteristica">Tiene la capacidad de ampliar su potencial usando módulos, también llamados extensiones.</li>
+                    <li class="li-caracteristica">Posibilidad de ampliación de técnicas de programación que se orienten a objetos,
+                        incluyendo aplicaciones tales como Zend Framework, empresa que se encarga del desarrollo de PHP, se encuentran
+                        completamente desarrolladas a través de esta metodología.</li>
+                    <li class="li-caracteristica">Es libre, por lo que es una alternativa de acceso fácil para cualquier persona.</li>
+                    <li class="li-caracteristica">Aunque el lenguaje de programación no obliga al usuario a realizar una metodología
+                        determinada cuando esté programando, aún en el momento de hacerlo el programador puede incluir en su trabajo
+                        cualquier técnica de desarrollo de programación con la que pueda escribir un código estructurado, ordenado y
+                        manejable. Por ejemplo, los desarrollos en PHP que se han realizado usando el patrón de diseño MVC posibilitan
+                        separar el acceso a los datos, el tratamiento, la interfaz de usuario y la lógica de control en tres independientes
+                        componentes.</li>
+                    <li class="li-caracteristica">Posee manejo de excepciones a partir de PHP5.</li>
+                    <li class="li-caracteristica">No necesita definir tipos de variables, aunque estas pueden evaluarse por el tipo que
+                        manejen mientras se están ejecutando.</li>
+                </div>
+            </div>
+
+            <div class="post" id="inv-3">
+                <div class="investigacion">
+                    <h1>Esqueleto de los programas</h1>
+                    <p>Un archivo PHP normalmente suele contener HTML y trozos de código PHP. Por ello antes de estudiar PHP es necesario
+                        haber estudiado HTML. A veces, se dice que PHP es un lenguaje “embebido” en HTML, es decir, incrustado en código
+                        HTML. Todos los fragmentos de código PHP deben comenzar con la siguiente cadena de caracteres:
+                        <?php ,y finalizar con ?></p>
+                    <p>Los símbolos <?php y ?> se dice que son los delimitadores del código PHP. Normalmente, una página PHP básica sería algo así:</p>
+                    <div class="esqueleto-programa">
+                        <img src="img/esqueleto_php.png" alt="Estructura de un programa escrito en el lenguaje PHP">
+                    </div>
+                    <p>En este código podemos identificar los siguientes elementos:</p>
+                    <ul>
+                        <li>La primera línea es una etiqueta relativa a la versión/variante de HTML que declaramos usar. Esta primera
+                            etiqueta no es estrictamente necesaria. Sirve únicamente para indicar qué estándar de HTML es el que declaramos
+                            usar.</li>
+                        <li>Las etiquetas de apertura y cierre de html que delimitan el código HTML.</li>
+                        <li>Las etiquetas de apertura y cierre head que delimitan la cabecera del código HTML.</li>
+                        <li>Las etiquetas body que delimitan el cuerpo del código HTML y que es donde suele ir el contenido central de un
+                            documento HTML (texto, imágenes, formularios, etc.).</li>
+                        <li>Dentro de las etiquetas body, además de código HTML, podemos tener código PHP embebido. En este caso hemos
+                            incluido únicamente un fragmento de código PHP, pero en el cuerpo del documento HTML podríamos incluir diversos
+                            fragmentos de código HTML mezclados con diversos fragmentos de código PHP. Cada fragmento de código PHP tiene
+                            que ir escrito con sus delimitadores.</li>
+                    </ul>
+                    <p>Esta estructura no se repite siempre. Por otro lado, decir que es habitual que el código PHP vaya embebido dentro de
+                        código HTML en un archivo con extensión .php, pero como ya hemos visto, un archivo con extensión .php podría
+                        contener exclusivamente código PHP.</p>
+                    <p>Se muestra a continuación un ejemplo de código como HTML en PHP:</p>
+                    <div class="esqueleto-programa">
+                        <img src="img/esqueleto2_php.png" alt="Estructura de un programa escrito con HTML en el lenguaje PHP">
+                    </div>
+                    <p>Para proyectarlo como página, primero se tiene que guardar el archivo y después escribir en el navegador la dirección
+                        web correspondiente al archivo.</p>
+                    <p>El resultado debería ser este:</p>
+                    <div class="esqueleto-programa">
+                        <img src="img/esqueleto3_php.png" alt="Resultado del código del HTML en el lenguaje PHP">
+                    </div>
+                    <p>No es tan diferente escribir HTML con PHP que con el mismo HTML.</p>                   
+                </div>
+            </div>
+
+            <div class="post" id="inv-4">
+                <div class="investigacion">
+                    <h1>Aplicación a descargar para editar y ejecutar</h1>
+                    <p>Miles de programadores coinciden en destacar a Netbeans como el mejor IDE para PHP. Tiene un gran número de
+                        funciones, es gratuito y tiene soporte para idiomas como el inglés, el japonés, el ruso, el portugués brasileño y el
+                        chino simplificado.</p>
+                    <div class="programa">
+                        <img src="img/netbeans_programa.png" alt="Logo de NetBeans">
+                        <a href="https://netbeans.apache.org/download/index.html" target="_blank">NetBeans</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post" id="inv-5">
+                <div class="investigacion">
+                    <h1>Paradigma</h1>
+                    <p>PHP es un lenguaje de programación cuya sintaxis es heredera de C, pero a diferencia de este último, PHP es un
+                        lenguaje de tipado dinámico, multiparadigma e interpretado. Se ha dotado a PHP con un soporte amplio de paradigmas
+                        de programación.</p>
+                </div>
+            </div>
+
+            <div class="post" id="inv-6">
+                <div class="investigacion">
+                    <h1>Ejemplo</h1>
+                    <h2>Clase En PHP</h2>
+                    <p>Una clase, es parte de la Programación Orientada a Objetos (POO, o OOP en inglés) en PHP. Una clase es un objeto.</p>
+                    <p><b>Archivo</b>: main.class.php</p>
+                    <ul><p>Código:</p></ul>                   
+                    <div class="code-info">
+                        <code><?
+                            <br>#Archivo de la clase
+                            <br>
+                            <br>class WordClass {
+                            <br>ㅤㅤㅤvar $text;
+                            <br>ㅤㅤㅤfunction __construct($number) {
+                            <br>ㅤㅤㅤㅤㅤㅤㅤㅤecho "Empezo la clase: ".$number."";
+                            <br>ㅤㅤㅤ}
+                            <br>ㅤㅤㅤfunction cambiarWord($nuevotexto) {
+                            <br>ㅤㅤㅤㅤㅤㅤㅤㅤecho "El texto ".$this->text." ha sido remplazado por: ";
+                            <br>ㅤㅤㅤㅤㅤㅤㅤㅤ$this->text = $nuevotexto;
+                            <br>ㅤㅤㅤㅤㅤㅤㅤㅤecho $this->text;
+                            <br>ㅤㅤㅤㅤㅤㅤㅤㅤecho "";
+                            <br>ㅤㅤㅤ}
+                            <br>}
+                            <br>?></code>
+                    </div>
+                    <p><b>Archivo</b>: index.php</p>
+                    <ul><p>Código:</p></ul>                  
+                    <div class="code-info">
+                        <code><?
+                            <br>#Archivo principal donde llamaremos a la clase
+                            <br>include("main.class.php);
+                            <br>
+                            <br>$Palabrerio = new WordClass(1); //Mostrará "Empezo la clase: 1" Ya que pasamos el numero 1 como parametro
+                            <br>$Palabrerio->cambiarWord("Hola como te va");
+                            <br>$Palabrerio->cambiarWord("Lalala");
+                            ?></code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="botones">
+            <a href="investigaciones.html"><button><span></span>REGRESAR</button></a>
+            <a href="index.html"><button><span></span>INICIO</button></a>
+            <a href="trabajos.html"><button><span></span>TRABAJOS</button></a>
+        </div>
+    </footer>
+</body>
+</html>

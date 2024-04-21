@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/investigacion7.css">
+    <link rel="shortcut icon" href="icon/lupa.png" type="image/x-icon">
+    <title>Investigación #7</title>
+</head>
+<body>
+    <nav>
+        <h1>INICIO • TRABAJOS • INVESTIGACIONES • <i class="seccion_investigacion">INVESTIGACIÓN #7</i></h1>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="indices">
+                <div class="info-secciones">
+                    <h1>Secciones</h1>
+                    <p><a href="#titulo-descrip">• Investigación</a></p>
+                    <p><a href="#inv-1">• Símbolos</a></p>
+                    <p><a href="#inv-2">• Sintaxis</a></p>
+                    <p><a href="#inv-3">• Esqueleto</a></p>
+                    <p><a href="#inv-4">• Aplicación</a></p>
+                    <p><a href="#inv-5">• Paradigma</a></p>
+                    <p><a href="#inv-6">• Ejemplo</a></p>
+                    <hr>
+                    <p><a href="investigacion8.html">• Siguiente</a></p>
+                    <p><a href="investigacion6.html">• Atrás</a></p>
+                    <hr>
+                    <p><a href="#">• Ir al principio</a></p>
+                    <p><a href="#footer">• Ir al final</a></p>
+                </div>
+            </div>
+
+            <div class="post" id="titulo-descrip">
+                <div class="titulo-descrip">
+                    <h1>Investigación #7:</h1>
+                    <h2>Investigar para el lenguaje 'Scheme' sus símbolos, sintaxis, esqueleto de los programas, aplicación a descargar,
+                        paradigma y un ejemplo escrito en dicho lenguaje.</h2>
+                </div>
+            </div>
+
+            <div class="post" id="inv-1">
+                <div class="investigacion">
+                    <h1>Símbolos</h1>
+                    <p>Scheme, como lenguaje de programación, utiliza de manera análoga a las
+                        palabras los denominados símbolos y éstos se forman uniendo las letras del alfabeto (sin
+                        distinguir mayúsculas de minúsculas), los dígitos del 0 al 9 y cualquier otro carácter que
+                        aparezca en el teclado salvo:</p>
+                    <div class="code-info">
+                        <code>( ) [ ] { } ; , "' ` # \</code>
+                    </div>
+                    <p>ya que tienen un significado especial, similar al que tienen los signos de puntuación. Los caracteres:</p>
+                    <div class="code-info">
+                        <code>+ - .</code>
+                    </div>
+                    <p>también son especiales y no deben aparecer en primer lugar en un símbolo. Los númerosno se consideran símbolos en Scheme.</p>
+                    <p>Un símbolo que es usado para representar un valor se denomina variable. El intérprete
+                        determinará el significado de cada variable; los números tienen su valor usual.
+                        Siguiendo la analogía con los lenguajes el equivalente en Scheme a las frases son las
+                        expresiones, que pueden consistir en un símbolo, un número o una lista, es decir, un
+                        paréntesis izquierdo, seguido de expresiones separadas por espacios en blanco, y para
+                        terminar un paréntesis derecho. La primera de dichas expresiones debe evaluar a un
+                        procedimiento, evaluándose las restantes como los argumentos del mismo.</p>
+                </div>
+            </div>
+
+            <div class="post" id="inv-2">
+                <div class="investigacion">
+                    <h1>Sintaxis</h1>
+                    <p>Scheme posee una sintaxis reducida comparada a otros lenguajes. Utiliza la notación prefija. Por ejemplo, si se desea
+                        realizar la suma 1+1, se debe programar la siguiente instrucción</p>
+                    <div class="code-info">
+                        <code>(+ 1 1)</code>
+                    </div>
+                    <p>Los paréntesis son obligatorios, ya que separan las instrucciones que serán evaluadas por el intérprete. Para
+                        realizar comentarios dentro del código, se utiliza el ";", así se marca que toda la línea será de comentario
+                        Ejemplo:</p>
+                    <div class="code-info">                   
+                        <code>;Esta línea es un comentario, y la orden de abajo es ejecutada<br>(+ 1 1)</code>                  
+                    </div>
+                    <h2>Sintaxis Básica</h2>
+                    <div class="code-info">
+                        <code>Expresión -> átomo | lista
+                            <br>átomo -> número | string | identificador | carácter | boolean
+                            <br>lista -> '(' secuencia-expresión ')'
+                            <br>secuencia-expresión -> expresión secuencia - expresión | expresión
+                            <br>función -> ( nombre_función argumento1 argumento 2... argumento n)</code>
+                    </div>
+                    <p>Analizar la sintexis básica nos ayudará a empezar poco a poco al mundo del lenguaje Scheme.</p>
+                </div>
+            </div>
+
+            <div class="post" id="inv-3">
+                <div class="investigacion">
+                    <h1>Esqueleto de los programas</h1>
+                    <p>Un ejemplo sería las <b>Definiciones</b> en Scheme.</p>
+                    <li>Scheme usa la siguiente construcción para asociarle un nombre a un valor:</li>
+                    <div class="code-info">
+                        <code>(define <'nombre-nuevo'> <'valor-inicial'>)</code>
+                    </div>
+                    <li>Las parejas nombre/valor son almacenadas y buscadas en el diccionario que constituye el entorno global de ejecución</li>
+                    <li>Es posible asociar un nombre a: valores constantes, el resultado de evaluar otras expresiones, procedimientos, etc.</li>
+                    <li>Cuando se define un nuevo procedimiento, éste tendrá su propio entorno local de ejecución.</li>
+                    <li>Las definiciones se pueden anidar (estructura de bloque)</li>
+                    <div class="esqueleto-programa">
+                        <img src="img/esqueleto_scheme.png" alt="Esqueleto de un programa escrito en lenguaje Scheme">
+                    </div>
+                </div>
+            </div>
+
+            <div class="post" id="inv-4">
+                <div class="investigacion">
+                    <h1>Aplicación a descargar para editar y ejecutar</h1>
+                    <p>El lenguaje Scheme necesita un IDE para trabajar en ello, por lo tanto, el entorno de programación <b>DrRacket</b> le
+                        ofrece un lugar para programar con dicho lenguaje.</p>
+                    <div class="programa">
+                        <img src="img/racket_programa.png" alt="Logo del lenguaje de programación Racket">
+                        <a href="https://racket-lang.org/" target="_blank">DrRacket</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post" id="inv-5">
+                <div class="investigacion">
+                    <h1>Paradigma</h1>
+                    <p>Scheme es un lenguaje multiparadigma pero principalmente funcional, y una de sus características principales es que
+                        los programas se construyen mediante la definición de funciones.</p>
+                </div>
+            </div>
+
+            <div class="post" id="inv-6">
+                <div class="investigacion">
+                    <h1>Ejemplo</h1>
+                    <p>Programa en Scheme que determina si un número es par o impar.</p>
+                    <div class="ejemplo-programa">
+                        <img src="img/scheme_ejemplo_programa.png" alt="Ejemplo en código del lenguaje de programación Scheme">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="botones">
+            <a href="investigaciones.html"><button><span></span>REGRESAR</button></a>
+            <a href="index.html"><button><span></span>INICIO</button></a>
+            <a href="trabajos.html"><button><span></span>TRABAJOS</button></a>
+        </div>
+    </footer>
+</body>
+</html>

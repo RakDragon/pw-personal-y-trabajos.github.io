@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/investigacion12.css">
+    <link rel="shortcut icon" href="icon/lupa.png" type="image/x-icon">
+    <title>Investigación #12</title>
+</head>
+<body>
+    <nav>
+        <h1>INICIO • TRABAJOS • INVESTIGACIONES • <i class="seccion_investigacion">INVESTIGACIÓN #12</i></h1>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="indices">
+                <div class="info-secciones">
+                    <h1>Secciones</h1>
+                    <p><a href="#titulo-descrip">• Investigación</a></p>
+                    <p><a href="#inv-1">• Símbolos</a></p>
+                    <p><a href="#inv-2">• Sintaxis</a></p>
+                    <p><a href="#inv-3">• Esqueleto</a></p>
+                    <p><a href="#inv-4">• Aplicación</a></p>
+                    <p><a href="#inv-5">• Paradigma</a></p>
+                    <p><a href="#inv-6">• Ejemplo</a></p>
+                    <hr>
+                    <p><a href="investigacion13.html">• Siguiente</a></p>
+                    <p><a href="investigacion11.html">• Atrás</a></p>
+                    <hr>
+                    <p><a href="#">• Ir al principio</a></p>
+                    <p><a href="#footer">• Ir al final</a></p>
+                </div>
+            </div>
+
+            <div class="post" id="titulo-descrip">
+                <div class="titulo-descrip">
+                    <h1>Investigación #12:</h1>
+                    <h2>Investigar para el lenguaje 'Ada' sus símbolos, sintaxis, esqueleto de los programas, aplicación a descargar, paradigma
+                        y un ejemplo escrito en dicho lenguaje.</h2>
+                </div>
+            </div>
+
+            <div class="post" id="inv-1">
+                <div class="investigacion">
+                    <h1>Símbolos</h1>
+                    <h2>Números</h2>
+                    <p>Ada contiene símbolos y uno de ellos son los literales numéricos, constan de:</p>
+                    <ul>
+                        <li>dígitos 0 .. 9</li>
+                        <li>el separador de decimales '.'</li>
+                        <li>el símbolo de exponenciación 'e' o 'E'</li>
+                        <li>el símbolo de negativo '-'</li>
+                        <li>el separador '_'</li>
+                    </ul>
+                    <h2>Literales de tipo carácter</h2>
+                    <p>Contienen un único carácter, por ejemplo: A. Aquí sí se diferencian mayúsculas de minúsculas. Se delimitan
+                        por un apóstrofe.</p>
+                    <div class="code-info">
+                        <code>'A' 'ñ' '%'</code>
+                    </div>
+            
+                    <h2>Delimitadores</h2>
+                    <p>Otros símbolos de Ada serían los delimitadores, pueden ser uno de los siguientes caracteres especiales:</p>
+                    <div class="code-info">
+                        <code>&    '    (    )    *    +    ,    -    .    /    :    ;    <    =    >   </code>
+                    </div>
+                    <p>O ser uno de los delimitadores compuestos por dos caracteres especiales:</p>
+                    <div class="code-info">
+                        <code>=>    ..    **    :=    /=    >=    <=    <<    >>    <></code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post" id="inv-2">
+                <div class="investigacion">
+                    <h1>Sintaxis</h1>
+                    <li class="li-caracteristica">La sintaxis, inspirada en Pascal, es bastante legible incluso para personas que no conozcan el lenguaje. Es un
+                        lenguaje que no escatima en la longitud de las palabras clave, en la filosofía de que un programa se escribe una
+                        vez, se modifica decenas de veces y se lee miles de veces (legibilidad es más importante que rapidez de escritura).</li>
+                    <li class="li-caracteristica">Es indiferente el uso de mayúsculas y minúsculas en los identificadores y palabras claves; es decir, es un lenguaje case-insensitive.</li>
+                    <li class="li-caracteristica">En Ada, todo el programa es un único procedimiento, que puede contener subprogramas (procedimientos o funciones).</li>
+                    <li class="li-caracteristica">Cada sentencia se cierra con end qué_cerramos. Es un modo de evitar errores y facilitar la lectura. No es necesario
+                        hacerlo en el caso de subprogramas, aunque todos los manuales lo aconsejan y casi todos los programadores de Ada lo
+                        hacen.</li>
+                    <li class="li-caracteristica">El operador de asignación es :=, el de igualdad =. A los programadores de C y similares les puede confundir este rasgo inspirado en Pascal.</li>
+                    <li class="li-caracteristica">La sintaxis de atributos predefinidos es Objeto'Atributo (o Tipo'Atributo) (nota: esto sólo afecta a atributos
+                        predefinidos por el lenguaje, ya que no es el concepto de atributo típico de OOP).</li>
+                    <li class="li-caracteristica">Se distingue entre "procedimientos" (subrutinas que no devuelven ningún valor pero pueden modificar sus parámetros)
+                        y "funciones" (subrutinas que devuelven un valor y no modifican los parámetros). Muchos lenguajes de programación no
+                        hacen esta distinción. Las funciones de Ada favorecen la seguridad al reducir los posibles efectos colaterales, pues
+                        no pueden tener parámetros in out.</li>
+                </div>
+            </div>
+
+            <div class="post" id="inv-3">
+                <div class="investigacion">
+                    <h1>Esqueleto de los programas</h1> 
+                    <p>Todo programa Ada tiene 4 componentes:</p>
+                    <ul>
+                        <li>la especificación del contexto;</li>
+                        <li>la especificación del programa;</li>
+                        <li>la parte declarativa;</li>
+                        <li>el cuerpo.</li>
+                    </ul>
+                    <p>La parte de especificación del contexto son directivas al compilador Ada. Pueden incluir
+                        determinadas librerías, por ejemplo: la sentencia ”with ada_io” incluye la librería de
+                        entrada/salida, en donde se encuentran los procedimientos que realizan la entrada/salida.
+                        La especificación del programa da el nombre del programa.
+                        <br>La parte declarativa incluye las declaraciones de cualquier objeto. Puede contener
+                        definiciones de variables y procedimientos.
+                        <br>El cuerpo del programa está compuesto de la secuencia de sentencias.</p>
+                    <h2>Ejemplo</h2>
+                    <div class="esqueleto-programa">
+                        <img src="img/esqueleto_ada.png" alt="Ilustración de la estructura de un programa escrito en lenguaje Ada">
+                    </div>
+                </div>
+            </div>
+
+            <div class="post" id="inv-4">
+                <div class="investigacion">
+                    <h1>Aplicación a descargar para editar y ejecutar</h1>
+                    <p>GNAT es un conocido compilador del lenguaje de programación Ada, basado en la infraestructura de compilación de GCC.
+                        Ha sido escrito casi por completo en el mismo Ada, e implementa todos los anexos del estándar, habiendo sido
+                        certificado de ello.</p>
+                    <div class="programa">
+                        <img src="img/ada_programa.png" alt="Logo del lenguaje Ada">
+                        <a href="https://sourceforge.net/projects/gnuada/" target="_blank">GNAT Ada Compiler</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post" id="inv-5">
+                <div class="investigacion">
+                    <h1>Paradigma</h1>
+                    <p>Ada está dentro del paradigma <b>Orientado a objetos</b> e <b>imperativo</b>.</p>
+                </div>
+            </div>
+
+            <div class="post" id="inv-6">
+                <div class="investigacion">
+                    <h1>Ejemplo</h1>
+                    <div class="ejemplo-programa">
+                        <img src="img/ada_ejemplo_programa.png" alt="Ejemplo de ejercicio de un programa escrito en lenguaje Ada">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="botones">
+            <a href="investigaciones.html"><button><span></span>REGRESAR</button></a>
+            <a href="index.html"><button><span></span>INICIO</button></a>
+            <a href="trabajos.html"><button><span></span>TRABAJOS</button></a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/investigacion8.css">
+    <link rel="shortcut icon" href="icon/lupa.png" type="image/x-icon">
+    <title>Investigación #8</title>
+</head>
+
+<body>
+    <nav>
+        <h1>INICIO • TRABAJOS • PORTAFOLIO • INVESTIGACIONES • <i class="seccion_investigacion">INVESTIGACIÓN #8</i></h1>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="indices">
+                <div class="info-secciones">
+                    <h1>Secciones</h1>
+                    <p><a href="#titulo-descrip">• Investigación</a></p>
+                    <p><a href="#inv-1">• Símbolos</a></p>
+                    <p><a href="#inv-2">• Sintaxis</a></p>
+                    <p><a href="#inv-3">• Esqueleto</a></p>
+                    <p><a href="#inv-4">• Aplicación</a></p>
+                    <p><a href="#inv-5">• Paradigma</a></p>
+                    <p><a href="#inv-6">• Ejemplo</a></p>
+                    <hr>
+                    <p><a href="investigacion9.html">• Siguiente</a></p>
+                    <p><a href="investigacion7.html">• Atrás</a></p>
+                    <hr>
+                    <p><a href="#">• Ir al principio</a></p>
+                    <p><a href="#footer">• Ir al final</a></p>
+                </div>
+            </div>
+
+            <div class="post" id="titulo-descrip">
+                <div class="titulo-descrip">
+                    <h1>Investigación #8:</h1>
+                    <h2>Investigar para el lenguaje 'Haskell' sus símbolos, sintaxis, esqueleto de los programas,
+                        aplicación a descargar, paradigma y un ejemplo escrito en dicho lenguaje.</h2>
+                </div>
+            </div>
+
+            <div class="post" id="inv-1">
+                <div class="investigacion">
+                    <h1>Símbolos</h1>
+                    <h2>Operadores</h2>
+                    <p>Uno de los símbolos que integra Haskell son de los operadores, cadenas de símbolos escogidos
+                        entre:</p>
+                    <ul>
+                        <p>!, #, $, %, &, *, +, -, ., /, <, = , > , ? , @ , \ , :,...
+                                ,...</p>
+                    </ul>
+                    <p>Ejemplo:</p>
+                    <ul>
+                        <p>+!+, <&, <=>,...</p>
+                    </ul>
+                    <p>Si queremos utilizar el operador como constructor de datos, debe empezar por: ';'</p>
+                    <p>Todos los valores de Haskell son de primera categoría ("first-class") ---pueden ser argumentos o
+                        resultados de
+                        funciones, o pueden ser ubicados en estructuras de datos, etc. Por otro lado, los tipos de
+                        Haskell no son de primera
+                        categoría. En cierto sentido, los tipos describen valores, y la asociación de un valor con su
+                        tipo se llama un
+                        tipificado (typing). Podemos escribir "tipificaciones" como los siguientes:</p>
+                    <div class="code-info">
+                        <code>5  :: Integer
+                            <br>'a' :: Char
+                            <br>inc :: Integer -> Integer
+                            <br>[1,2,3] :: [Integer]
+                            <br>('b',4) :: (Char,Integer)</code>
+                    </div>
+                    <p>El símbolo "::" puede leerse "tiene el tipo".</p>
+                </div>
+            </div>
+
+            <div class="post" id="inv-2">
+                <div class="investigacion">
+                    <h1>Sintaxis</h1>
+                    <p>A diferencia de los operadores, las funciones se utilizan en notación prefija, es decir, el
+                        nombre de la función se
+                        coloca antes de sus parámetros. Los nombres de las funciones sólo pueden contener caracteres
+                        normales, es decir,
+                        letras, dígitos, comillas y subrayados. El primer carácter de un identificador de función no
+                        puede ser una letra
+                        mayúscula ni un dígito.</p>
+                    <p>También es posible aplicar parcialmente una función, sin suministrarle todos sus parámetros. Esto
+                        genera una nueva función, que puede utilizarse como otra función cualquiera. Esta facilidad es
+                        especialmente útil en presencia de orden superior.</p>
+                    <p>La siguiente lista se muestra los tipos, funciones y operadores que conforman el ecosistema de
+                        sintaxis del lenguaje <b>Haskell</b>:</p>
+                    <p>Haskell es un lenguaje funcional puro, no estricto y fuertemente tipificado.</p>
+                    <ul>
+                        <li><b>Puro</b> = transparencia referencial:</li>
+                        <li><b>No estricto</b> = usa un orden no aplicativo (Evaluación perezosa).</li>
+                        <li><b>Tipificación fuerte</b> = los elementos del lenguaje utilizables están clasificados en distintas
+                            categorías o tipos.</li>
+                    </ul>
+                    <p>Un programa consiste en definiciones de funciones:</p>
+                    <ul>
+                        <li><b>Declararla</b>: indicar el tipo</li>
+                        <li><b>Definirla</b>: dar el método de computo.</li>
+                    </ul>
+                    <p>Los principales tipos de datos básicos predefinidos en Haskell son: Char, Int, Integer, Float,
+                        Double y Bool.</p>
+                    <p>Un ejemplo escrito con esta sintaxis es la siguiente:</p>
+                    <div class="code-info">
+                        <code>Calcula el siguiente entero al argumento</code>
+                        <code>sucesor :: Integer → Integer
+                            <br>sucesor x = x + 1</code>
+                    </div>
+                    <div class="code-info">
+                        <code>Calcula la suma de los cuadrados de sus dos argumentos</code>
+                        <code>sumaCuadrados :: Integer → Integer → Integer
+                            <br>sumaCuadrados x y = x ∗ x + y ∗ y</code>
+                    </div>
+                    <p>Con estos ejemplos se puede notar la diferencia de sintaxis a comparación con otros lenguajes de
+                        programación.</p>
+                </div>
+            </div>
+
+            <div class="post" id="inv-3">
+                <div class="investigacion">
+                    <h1>Esqueleto de los programas</h1>
+                    <p>La estructura de un programa de haskell es sorprendentemente simple. Tienes un main función que
+                        hace IO, y eso es todo. Así que lo básico:</p>
+                    <div class="code-info">
+                        <code>module Main where
+                            <br>addition a b = a + b 
+                            <br>main :: IO () 
+                            <br>main = do let z = addition 5 3 
+                            <br>ㅤㅤㅤㅤㅤㅤputStrLn $ "The result is: " ++ show z</code>
+                    </div>
+                    <p>Ahora puedes compilar esto en un simple programa usando algo como:</p>
+                    <div class="code-info">
+                        <code>ghc --make Main.hs -o program</code>
+                    </div>
+                    <p>y debería producir un ejecutable llamado programa.</p>
+                </div>
+            </div>
+
+            <div class="post" id="inv-4">
+                <div class="investigacion">
+                    <h1>Aplicación a descargar para editar y ejecutar</h1>
+                    <p>GHC (Glasgow Haskell Compiler) es un compilador de Haskell. El compilador es de libre
+                        distribución, y existen
+                        versiones gratuitas para distintos sistemas operativos. La web principal del compilador contiene
+                        las distintas
+                        versiones del mismo, así como la documentación de instalación y uso.</p>
+                    <div class="programa">
+                        <img src="img/haskell_programa.png" alt="Logo del lenguaje de programación Haskell">
+                        <a href="https://www.haskell.org/ghc/" target="_blank">GHC</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post" id="inv-5">
+                <div class="investigacion">
+                    <h1>Paradigma</h1>
+                    <p>Este lenguaje se ha convertido en uno de los lenguajes más populares en el campo de la
+                        Inteligencia Artificial. Sin embargo, para que el lenguaje fuese práctico, fue necesario incluir
+                        características propias de los lenguajes imperativos como la asignación destructiva y los
+                        efectos laterales que lo alejaron del paradigma funcional.</p>
+                </div>
+            </div>
+
+            <div class="post" id="inv-6">
+                <div class="investigacion">
+                    <h1>Ejemplo</h1>
+                    <p>Dada una cantidad de segundos, devuelve la cantidad de horas, minutos y segundos</p>
+                    <div class="ejemplo-programa">
+                        <img src="img/haskell_ejemplo_programa.png" alt="Ejemplo en código del lenguaje de programación Haskell">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="botones">
+            <a href="investigaciones.html"><button><span></span>REGRESAR</button></a>
+            <a href="index.html"><button><span></span>INICIO</button></a>
+            <a href="trabajos.html"><button><span></span>TRABAJOS</button></a>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/investigacion14.css">
+    <link rel="shortcut icon" href="icon/lupa.png" type="image/x-icon">
+    <title>Investigación #14</title>
+</head>
+<body>
+    <nav>
+        <h1>INICIO • TRABAJOS • INVESTIGACIONES • <i class="seccion_investigacion">INVESTIGACIÓN #14</i></h1>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="indices">
+                <div class="info-secciones">
+                    <h1>Secciones</h1>
+                    <p><a href="#titulo-descrip">• Investigación</a></p>
+                    <p><a href="#inv-1">• Símbolos</a></p>
+                    <p><a href="#inv-2">• Sintaxis</a></p>
+                    <p><a href="#inv-3">• Esqueleto</a></p>
+                    <p><a href="#inv-4">• Aplicación</a></p>
+                    <p><a href="#inv-5">• Paradigma</a></p>
+                    <p><a href="#inv-6">• Ejemplo</a></p>
+                    <hr>
+                    <p><a href="investigacion15.html">• Siguiente</a></p>
+                    <p><a href="investigacion13.html">• Atrás</a></p>
+                    <hr>
+                    <p><a href="#">• Ir al principio</a></p>
+                    <p><a href="#footer">• Ir al final</a></p>
+                </div>
+            </div>
+
+            <div class="post" id="titulo-descrip">
+                <div class="titulo-descrip">
+                    <h1>Investigación #14:</h1>
+                    <h2>Investigar para el lenguaje 'Ruby' sus símbolos, sintaxis, esqueleto de los programas, aplicación a descargar, paradigma
+                        y un ejemplo escrito en dicho lenguaje.</h2>
+                </div>
+            </div>
+
+            <div class="post" id="inv-1">
+                <div class="investigacion">
+                    <h1>Símbolos</h1>
+                    <h2>Hashes y Símbolos</h2>
+                    <p>Un símbolo parece una variable, pero está precedido de dos puntos. Ejemplos:</p>
+                    <div class="code-info">
+                        <code>:action
+                            <br>:line_tines</code>
+                    </div>
+                    <p>Los dos puntos se pueden interpretar como "la cosa llamada". Entonces :id, se interpreta como "la cosa llamada id".
+                        Los símbolos no contienen valores como las variables. Un símbolo es una etiqueta, un nombre, nada más.</p>
+                    
+                    <h2>Símbolos vs Strings</h2>
+                    <p>Un símbolo es el objeto más básico que puedes crear en Ruby: es un nombre y una ID interna. Los símbolos son útiles
+                        por que dado un símbolo, se refiere al mismo objeto en todo el programa. Por lo tanto, son más eficientes que los
+                        strings: dos strings con el mismo nombre, son dos objetos distintos. Esto implica un ahorra de tiempo y memoria.</p>
+                        <div class="code-info">
+                            <code>puts "hola".object_id   # 21066960
+                                <br>puts "hola".object_id   # 21066730
+                                <br>puts :hola.object_id    # 132178
+                                <br>puts :hola.object_id    # 132178</code>
+                        </div>
+                    <p>Cada vez que se ha usado un string, se ha creado un objeto nuevo. Por tanto, ¿cuándo usar un string, y cuándo un símbolo?</p>
+                    <ul>
+                        <li>Si el contenido del objeto es lo importante, usa un string.</li>
+                        <li>Si la identidad del objeto es importante, usa un símbolo.</li>
+                    </ul>
+                    <p>Ruby usa una tabla de símbolos interna con los nombres de las variables, objetos, métodos, clases… Por ejemplo, si
+                        hay un método con el nombre de control_movie, automáticamente se crea el símbolo :control_movie. Para ver la tabla
+                        de símbolos Symbol.all_symbols.</p>
+                    <p>Como veremos a continuación, los símbolos son particularmente útiles para los hashes.</p>
+
+                    <h2>Hashes</h2>
+                    <p>Hashes, también conocidos como arrays asociativos, mapas o diccionarios, son parecidos a los arrays en que son una
+                        colección indexada de referencias a objetos. Sin embargo, mientras que en los arrays los índices son números, en los
+                        hashes se puede indexar con objetos de cualquier tipo: strings, expresiones regulares, etc.</p>
+                    <p>Cuando se almacena un valor en un array, se dan dos objetos: el índice y el valor. A posteriori se puede obtener dicho valor, gracias al índice.</p>
+                    <div class="code-info">
+                        <code>h = {'perro' => 'canino', 'gato' => 'felino', 'burro' => 'asno', 12 => 'docena'}
+                            <br>puts h.length   # 4
+                            <br>puts h['perro'] # 'canino'
+                            <br>puts h
+                            <br>puts h[12]</code>
+                    </div>
+                    <p>Comparados con los arrays, tenemos una ventaja significativa: se puede usar cualquier objeto como índice. Sin
+                        embargo, sus elementos no están ordenados, y es fácil usar un hash como una pila o cola.</p>
+                    <p>Los hashes tienen un valor por defecto. Este valor se devuelve cuando se usan índices que no existen: el valor que se
+                        devuelve por defecto es nil.</p>
+                    
+                    <h2>Los símbolos como índices</h2>
+                    <p>Por las ventajas antes citadas, se usan los símbolos como índices:</p>
+                    <div class="code-info">
+                        <code>persona = Hash.new
+                            <br>persona[:nombre] = 'Pedro'
+                            <br>persona[:apellido] = 'Picapiedra'
+                            <br>
+                            <br>puts persona[:nombre]</code>
+                    </div>
+                    <p>Que es equivalente a:</p>
+                    <div class="code-info">
+                        <code>persona = {:nombre => 'Pedro', :apellido => 'Picapiedra'}
+                            <br>
+                            <br>puts persona[:apellido]</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post" id="inv-2">
+                <div class="investigacion">
+                    <h1>Sintaxis</h1>
+                    <li class="li-caracteristica">Mejor amigo del programador.</li>
+                    <li class="li-caracteristica">Es un lenguaje de propósito general, es decir, con Ruby se pueden desarrollar todo tipo de aplicaciones diferentes:
+                        aplicaciones de servicio web, clientes de correo electrónico, procesamiento de datos en Backend, aplicaciones de
+                        red, etc. Cualquier cosa que se te ocurra puedes hacerlo con Ruby.</li>
+                    <li class="li-caracteristica">Es un lenguaje interpretado, es decir, no es compilado, se necesita que el intérprete de Ruby evalué el código y lo
+                        traduzca en lenguaje de máquina entendible por un ordenador, pero no existe un proceso previo de compilación como en
+                        C o Java.</li>
+                    <li class="li-caracteristica">Es dinámico y flexible. Con estrategias como la metaprogramación (escribir programas que escriben o manipulan otros
+                        programas). Incluso se puede utilizar el propio lenguaje Ruby para alterar el código en tiempo de ejecución.</li>
+                    <li class="li-caracteristica">Es de alto nivel, significa que está lejos del lenguaje de máquina y es muy cercano al inglés, a veces parecerá que
+                        simplemente se está escribiendo en inglés.</li>
+                    <li class="li-caracteristica">Es de software libre (Open Source) y multiplataforma, se puede descargar totalmente gratis de la página oficial y
+                        ejecutarlo en diferentes sistemas operativos.</li>
+                    <p>100% Orientado a Objetos</p>
+                    <p>TODO es un objeto, es decir, todo tiene una serie de propiedades (variables de instancia) y sobre el objeto podemos
+                        realizar acciones (o ejecutar métodos).</p>
+                    
+                    <h2>RAILS</h2>
+                    <p>Ruby on Rails es un framework web que nació en la empresa Basecamp. Caracterizado por la simplicidad, usa el lenguaje
+                        de programación Ruby y se utiliza para construir aplicaciones web del lado del servidor (back end). Trabaja con el
+                        modelo MVC (modelo vista controlador), un patrón de arquitectura bastante famoso.</p>
+                    <p>Ruby on Rails sigue algunos principios de desarrollo, como Don’t repeat yourself (No te repitas a ti mismo), para
+                        evitar repetir código. Se vale de Convención sobre Configuración; esto es un paradigma de programación de software
+                        que busca minimizar el número de decisiones que un desarrollador necesita hacer, ganando simplicidad, sin perder
+                        flexibilidad. En resumen, te evita tomar decisiones, un beneficio de la agilidad que caracteriza a este framework.</p>
+                </div>
+            </div>
+
+            <div class="post" id="inv-3">
+                <div class="investigacion">
+                    <h1>Esqueleto de los programas</h1> 
+                    <h2>Condicional simple: If</h2>
+                    <p>Tomemos como ejemplo el If, esta condicional o estructura simplemente revisa que una condición se cumpla para
+                        ejecutar una parte del código. Están compuestas de una sola condición únicamente si es verdadera ejecutará la acción
+                        o acciones; por el contrario, si la condición es falsa no ejecutará nada. Siempre se marca el comienzo con el ‘if’ y
+                        termina la estructura con el ‘end’.</p>
+                    <div class="code-info">
+                        <code>
+                            #pruebas elementales, bucle if
+                            <br>variable=3 
+                            <br>print 'variable='
+                            <br>puts variable
+                            <br>if variable==3 # igualdad
+                            <br>ㅤputs 'variable igual que 3'
+                            <br>end
+                            <br>if variable<4 # menor
+                            <br>ㅤputs 'variable menor que 4'
+                            <br>end
+                            <br>if variable>1 # mayor
+                            <br>ㅤputs 'variable mayor que 1'
+                            <br>end
+                            <br>if variable>=3 # mayor o igual
+                            <br>ㅤputs 'mayor o igual que 3'
+                            <br>end
+                            <br>if variable<=3 # menor o igual
+                            <br>ㅤputs 'menor o igual que 3'
+                            <br>end
+                            <br>if variable!=4 # distinto
+                            <br>ㅤputs 'distinta de 4' 
+                            <br>end</code>
+                    </div>
+                    <p>Es sencillo desarrollar If's en Ruby.</p>
+                </div>
+            </div>
+
+            <div class="post" id="inv-4">
+                <div class="investigacion">
+                    <h1>Aplicación a descargar para editar y ejecutar</h1>
+                    <p>Aptana Studio 3 es una herramienta de desarrollo de código abierto para programadores que tengan experiencia en Ruby.
+                        Permite a los desarrolladores probar sus aplicaciones web usando un único entorno.</p>
+                    <div class="programa">
+                        <img src="img/aptana_programa.png" alt="Logo de la herramienta de desarrollo Aptana Studio 3">
+                        <a href="http://www.aptana.com/" target="_blank">Aptana Studio 3</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post" id="inv-5">
+                <div class="investigacion">
+                    <h1>Paradigma</h1>
+                    <p>Ruby es un lenguaje interpretado de scripts y utiliza el paradigma de programación orientada a objetos.</p>
+                </div>
+            </div>
+
+            <div class="post" id="inv-6">
+                <div class="investigacion">
+                    <h1>Ejemplo</h1>
+                    <p>Confeccionar un programa que pida por teclado tres notas de un alumno, calcule el promedio e imprima alguno de estos mensajes:
+                        <br>Si el promedio es >=7 mostrar "Promocionado".
+                        <br>Si el promedio es >=4 y <7 mostrar "Regular".
+                        <br>Si el promedio es <4 mostrar "Reprobado".</p>
+                    <div class="code-info">
+                        <code>puts "Ingrese primer nota"
+                            <br>nota1 = gets.to_i
+                            <br>puts "Ingrese segunda nota"
+                            <br>nota2 = gets.to_i
+                            <br>puts "Ingrese tercer nota"
+                            <br>nota3 = gets.to_i
+                            <br>prom = (nota1 + nota2 + nota3) / 3
+                            <br>if prom >= 7
+                            <br>ㅤputs "Promocionado"
+                            <br>else
+                            <br>ㅤif prom >= 4
+                            <br>ㅤㅤputs "Regular"
+                            <br>ㅤelse
+                            <br>ㅤㅤputs "Reprobado"
+                            <br>ㅤend
+                            <br>end</code>
+                    </div>
+                    <p>A la codificación del if anidado podemos observarla por el else del primer if</p>
+                    <p>La indentación (desplazar a derecha los contenidos que hay en la estructura condicional) del código Ruby nos permite
+                        una lectura de un programa, identificar que hay por la rama del verdadero y falso de cada if.</p>
+                    <div class="code-info">
+                        <code>if prom >= 7
+                            <br>ㅤputs "Promocionado"
+                            <br>else
+                            <br>ㅤif prom >= 4
+                            <br>ㅤㅤputs "Regular"
+                            <br>ㅤelse
+                            <br>ㅤㅤputs "Reprobado"
+                            <br>ㅤend
+                            <br>end</code></code>
+                    </div>
+                    <p>Todo if tiene su end respectivo.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="botones">
+            <a href="investigaciones.html"><button><span></span>REGRESAR</button></a>
+            <a href="index.html"><button><span></span>INICIO</button></a>
+            <a href="trabajos.html"><button><span></span>TRABAJOS</button></a>
+        </div>
+    </footer>
+</body>
+</html>

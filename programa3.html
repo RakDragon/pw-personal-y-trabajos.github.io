@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/programa3.css">
+    <link rel="shortcut icon" href="icon/java.ico" type="image/x-icon">
+    <title>Programa #3</title>
+</head>
+<body>
+    <nav>
+        <h1>INICIO • TRABAJOS • PROGRAMAS EN JAVA • <i class="seccion_investigacion-1">PROGRAMA #3</i></h1>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="indices">
+                <div class="info-secciones">
+                    <h1>Secciones</h1>
+                    <p><a href="#titulo-descrip">• Programa</a></p>
+                    <p><a href="#codigo-java">• Código</a></p>
+                    <hr>
+                    <p><a href="programa4.html">• Siguiente</a></p>
+                    <p><a href="programa2.html">• Anterior</a></p>
+                    <hr>
+                    <p><a href="#">• Ir al principio</a></p>
+                    <p><a href="#footer">• Ir al final</a></p>
+                </div>
+            </div>
+
+            <div class="post" id="titulo-descrip">
+                <div class="titulo-descrip">
+                    <h1>Programa #3: <i>Serie A</i></h1>
+                    <h2>Construya un programa en JAVA que calcule e imprima la siguiente serie para los N primeros términos:</h2>
+                </div>
+                <div class="img-program3-descrip">
+                    <img src="img/programa3-descrip.png" alt="Serie de números">
+                </div>
+            </div>
+
+            <div class="post" id="codigo-java">
+                <div>
+                    <h1>Código:</h1>
+                    <pre class="code-info">import javax.swing.JOptionPane;
+
+public class tarea18 {
+
+    public static void main (String[] args) {
+
+        String entrada;
+        int i,n,num;
+
+        entrada = JOptionPane.showInputDialog("Ingrese el total de números en la serie: ");
+        n = Integer.parseInt(entrada);
+        String letrero;
+        letrero = "Los números de la serie son: ";
+        
+        for(i = 1; i <= n; i++){
+            num = (int) Math.pow (i,2*i-1);
+            if (i==n){
+                letrero = letrero + num + ".";
+            }
+            else{
+                letrero = letrero + num + ", ";
+            }
+        }
+        JOptionPane.showMessageDialog(null, "" + letrero);
+    }
+}</pre>                               
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="botones">
+            <a href="programas_en_java.html"><button><span></span>REGRESAR</button></a>
+            <a href="index.html"><button><span></span>INICIO</button></a>
+            <a href="trabajos.html"><button><span></span>TRABAJOS</button></a>
+        </div>
+    </footer>
+</body>
+</html>

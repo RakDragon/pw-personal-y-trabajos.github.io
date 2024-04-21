@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/programa2.css">
+    <link rel="shortcut icon" href="icon/java.ico" type="image/x-icon">
+    <title>Programa #2</title>
+</head>
+<body>
+    <nav>
+        <h1>INICIO • TRABAJOS • PROGRAMAS EN JAVA • <i class="seccion_investigacion-1">PROGRAMA #2</i></h1>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="indices">
+                <div class="info-secciones">
+                    <h1>Secciones</h1>
+                    <p><a href="#titulo-descrip">• Programa</a></p>
+                    <p><a href="#codigo-java">• Código</a></p>
+                    <hr>
+                    <p><a href="programa3.html">• Siguiente</a></p>
+                    <p><a href="programa1.html">• Anterior</a></p>
+                    <hr>
+                    <p><a href="#">• Ir al principio</a></p>
+                    <p><a href="#footer">• Ir al final</a></p>
+                </div>
+            </div>
+
+            <div class="post" id="titulo-descrip">
+                <div class="titulo-descrip">
+                    <h1>Programa #2: <i>Conversión de Monedas</i></h1>
+                    <h2>Elabore un programa en JAVA que a través de un Menú de opciones permita al usuario convertir de pesos a las siguientes monedas:</h2>
+                    <ul class="monedas">
+                        <li>Dólar</li>
+                        <li>Euro</li>
+                        <li>Yen(Japonés)</li>
+                        <li>Dólar de Hong Kong</li>
+                    </ul>
+                    <h2>Notas:</h2>
+                    <ul class="notas">
+                        <li>Las equivalencias deberán definirse dentro del programa.</li>
+                        <li>Usar el cuadro de dialogo, showOptionDialog(), para seleccionar: Dólar, Euro, Yen, DolarHK)</li>  
+                    </ul>                    
+                </div>
+            </div>
+
+            <div class="post" id="codigo-java">
+                <div>
+                    <h1>Código:</h1>
+                    <pre class="code-info">import java.util.Scanner;
+import java.text.DecimalFormat;
+import javax.swing.JOptionPane;
+
+public class tarea17 {
+  public static void main(String[] args) {
+    try (Scanner input = new Scanner(System.in)) {
+    }
+
+    DecimalFormat df = new DecimalFormat("#.00");
+    int opc = 0;
+    double peso = 0;
+    double dolar = 0;
+    double euro = 0;
+    double yen = 0;
+    double dolarh = 0;
+    String mensaje = "";
+
+    do {
+      opc = Integer.parseInt(JOptionPane.showInputDialog(null,
+          "Digite la conversión de moneda que desea hacer:\n1. Peso mexicano a dolar.
+          \n2. Peso mexicano a euro.\n3. Peso mexicano a yen.\n4. Peso mexicano a dolar
+          hongkonés.\n5. Salir"));
+      switch (opc) {
+        case 1:
+          peso = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese la cantidad de
+          pesos"));
+
+          if (peso > 0) {
+            dolar = peso * 0.051;
+            mensaje = "La cantidad de $" + peso + " MXN son $" + df.format(dolar);
+          } else
+            mensaje = "Ingrese valores positivos";
+          JOptionPane.showMessageDialog(null, mensaje);
+          break;
+
+        case 2:
+          peso = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese la cantidad de
+          pesos"));
+
+          if (peso > 0) {
+            euro = peso * 0.046;
+            mensaje = "La cantidad de $" + peso + " MXN son €" + df.format(euro);
+          } else
+            mensaje = "Ingrese valores positivos";
+          JOptionPane.showMessageDialog(null, mensaje);
+          break;
+
+        case 3:
+          peso = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese la cantidad de
+          pesos"));
+
+          if (peso > 0) {
+            yen = peso * 5.42;
+            mensaje = "La cantidad de $" + peso + " MXN son ¥" + df.format(yen);
+          } else
+            mensaje = "Ingrese valores positivos";
+          JOptionPane.showMessageDialog(null, mensaje);
+          break;
+
+        case 4:
+          peso = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese la cantidad de
+          pesos"));
+
+          if (peso > 0) {
+            dolarh = peso * 0.66;
+            mensaje = "La cantidad de $" + peso + " MXN son $" + df.format(dolarh);
+          } else
+            mensaje = "Ingrese valores positivos";
+          JOptionPane.showMessageDialog(null, mensaje);
+          break;
+
+        case 5:
+          mensaje = "Has salido";
+          JOptionPane.showMessageDialog(null, mensaje);
+          break;
+          
+        default:
+          mensaje = "Ingrese valores que estén dentro del menú.";
+          JOptionPane.showMessageDialog(null, mensaje);
+          break;
+      }
+    } while (opc != 5);
+  }
+}</pre>                                
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="botones">
+            <a href="programas_en_java.html"><button><span></span>REGRESAR</button></a>
+            <a href="index.html"><button><span></span>INICIO</button></a>
+            <a href="trabajos.html"><button><span></span>TRABAJOS</button></a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/investigacion10.css">
+    <link rel="shortcut icon" href="icon/lupa.png" type="image/x-icon">
+    <title>Investigación #10</title>
+</head>
+<body>
+    <nav>
+        <h1>INICIO • TRABAJOS • INVESTIGACIONES • <i class="seccion_investigacion">INVESTIGACIÓN #10</i></h1>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="indices">
+                <div class="info-secciones">
+                    <h1>Secciones</h1>
+                    <p><a href="#titulo-descrip">• Investigación</a></p>
+                    <p><a href="#inv-1">• Símbolos</a></p>
+                    <p><a href="#inv-2">• Sintaxis</a></p>
+                    <p><a href="#inv-3">• Esqueleto</a></p>
+                    <p><a href="#inv-4">• Aplicación</a></p>
+                    <p><a href="#inv-5">• Paradigma</a></p>
+                    <p><a href="#inv-6">• Ejemplo</a></p>
+                    <hr>
+                    <p><a href="investigacion11.html">• Siguiente</a></p>
+                    <p><a href="investigacion9.html">• Atrás</a></p>
+                    <hr>
+                    <p><a href="#">• Ir al principio</a></p>
+                    <p><a href="#footer">• Ir al final</a></p>
+                </div>
+            </div>
+
+            <div class="post" id="titulo-descrip">
+                <div class="titulo-descrip">
+                    <h1>Investigación #10:</h1>
+                    <h2>Investigar para el lenguaje 'Gödel' sus símbolos, sintaxis, esqueleto de los programas, aplicación a descargar, paradigma
+                        y un ejemplo escrito en dicho lenguaje.</h2>
+                </div>
+            </div>
+
+            <div class="post" id="inv-1">
+                <div class="investigacion">
+                    <h1>Símbolos</h1>
+                    <h2>Numeración de Gödel</h2>
+                    <p>La numeración de Gödel es una función que asigna a cada símbolo y fórmula de un lenguaje formal un número único,
+                        denominado Número de Gödel (GN). El concepto fue utilizado por primera vez por Kurt Gödel para la demostración del
+                        teorema de Incompletitud de Gödel.</p>
+                    <p>La enumeración de un conjunto de funciones computables se denomina también enumeración de Gödel o enumeración
+                        efectiva. Una enumeración de Gödel se puede interpretar como un lenguaje de programación donde los números de Gödel
+                        están asignados a cada función computable igual que los programas de cálculos a los valores para la función en este
+                        lenguaje de programación.</p>
+                    <h2>Definición</h2>
+                    <p>Dado un conjunto enumerable S, una enumeración de Gödel es una función.</p>
+                    <ul>
+                        <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/024e23ef34a1b4941574dce6dbbf59e8e7ffe1e9" alt="Función de la enumeración de Gödel" class="formula-godel">
+                    </ul>
+                    <p>donde f y la inversa de f son funciones computables.</p>
+                    <p>Los números de Gödel se construyen con referencia a símbolos de cálculo proposicional y la aritmética formal. Cada
+                        símbolo se asigna primero a un número natural, por tanto:</p>
+                    <div class="símbolos-programa">
+                        <img src="img/godel_símbolos_programa.png" alt="Símbolos del lenguaje Gödel">                       
+                    </div>
+                    <p>Y así para todos los símbolos posibles. La sintaxis del cálculo proposicional asegura que no hay ambigüedad entre el
+                        símbolo "P" y el símbolo "+" aunque ambos estén asignados al número 12.</p>
+                </div>
+            </div>
+
+            <div class="post" id="inv-2">
+                <div class="investigacion">
+                    <h1>Sintaxis</h1>
+                    <p>Gödel tiene un sistema de módulos; permite enteros y racionales de precisión arbitraria y números de punto flotante.
+                        Puede resolver restricciones sobre dominios finitos de enteros así como restricciones lineales racionales. Admite
+                        procesamiento de conjuntos finitos. Tiene también una regla flexible de cómputo que admite el operador de poda, que
+                        es una generalización del operador commit de los lenguajes de programación concurrentes.</p>
+                    <p>Las facilidades meta lógicas de Gödel dan cabida a meta programas que realizan análisis, transformación, compilación,
+                        verificación y puesta a punto entre muchas otras tareas.</p>
+                    <p>Gödel apoya la representación básica de programas, scripts y teorías (de objetos). El primero de ellos viene dadopor
+                        el módulo Programas, el segundo por el módulo Scripts y el tercero por el móduloTeorías.</p>
+                    <p>Primero, Syntax importa todos los símbolos exportados por los módulos Integers, Lists y Strings. También declara
+                        (entre otras) las siguientes bases, que son requeridas por la representación básica de expresiones de varios tipos.</p>
+                    <h2>Términos: Name, Type, Term, Formula, TypeSubst, TermSubst y VarTyping</h2>
+                    <p>Name es el tipo de término que representa el nombre de un símbolo, Type es el tipo de término que representa un
+                        tipo, Term es el tipo de término que representa un término, Formula es el tipo de un término que representa una
+                        fórmula, TypeSubst es el tipo de un término que representa una sustitución de tipo, TermSubst es el tipo de término
+                        que representa una sustitución de término y VarTyping es el tipo de un término que representa una variable
+                        escribiendo.</p>
+                </div>
+            </div>
+
+            <div class="post" id="inv-3">
+                <div class="investigacion">
+                    <h1>Esqueleto de los programas</h1>   
+                    <p>Así es como sería la estructura de un programa en el lenguaje Gödel:</p>                
+                    <div class="code-info">
+                        <code>IMPORT Integers.
+                            <br>PREDICATE Fib : Integer * Integer.
+                            <br>% Fib(k,n) <-> n is the Fibonacci number F_{k} of rank k.
+                            <br>Fib(0,0).Fib(1,1).
+                            <br>Fib(k,n) <-
+                            <br>k > 1 &
+                            <br>FibIt(k-2,1,1,n).
+                            <br>PREDICATE FibIt : Integer * Integer * Integer * Integer.
+                            <br>% FibIt(k,f,g,n) <-> n = F_{k} * f + F_{k+1} * g.
+                            <br>FibIt(0,_,g,g).
+                            <br>FibIt(k,f,g,n) <-
+                            <br>k > 0 &
+                            <br>g < n &
+                            <br>FibIt(k-1,g,f+g,n).</code>
+                    </div>
+                    <p>Como curiosidad, se puede destacar que este lenguaje no funciona en un entorno Windows.</p>
+                </div>
+            </div>
+
+            <div class="post" id="inv-4">
+                <div class="investigacion">
+                    <h1>Aplicación a descargar para editar y ejecutar</h1>
+                    <p>Swi Prolog ofrece un campo de trabajo para el lenguaje de programación Gödel.</p>
+                    <div class="programa">
+                        <img src="img/logoprolog.png" alt="Logo de Swi Prolog">
+                        <a href="https://www.swi-prolog.org/download/stable" target="_blank">SWI Prolog</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post" id="inv-5">
+                <div class="investigacion">
+                    <h1>Paradigma</h1>
+                    <p>Gödel es un lenguaje de programación declarativo, de propósito general, adherido al paradigma de la programación
+                        lógica. Es un lenguaje fuertemente tipado, con un sistema de tipos basado en many-sorted logic con polimorfismo
+                        parametrizado. Se le dio ese nombre en honor al lógico Kurt Gödel.</p>
+                    
+                </div>
+            </div>
+
+            <div class="post" id="inv-6">
+                <div class="investigacion">
+                    <h1>Ejemplo</h1>
+                    <p>El siguiente ejemplo de módulo Gödel es una especificación del máximo común divisor (MCD) de dos números. Su objetivo
+                        es mostrar la naturaleza declarativa de Gödel, pero no es particularmente eficiente. El predicado DivisorComun dice
+                        que si i y j no son cero, d es un divisor común de i y j si está entre 1 y el menor entre i y j y divide a los dos
+                        en forma exacta. El predicado Mcd dice que d es el MCD de i y j si es un divisor común de i y j y no existe e que
+                        sea también divisor común de i y j y sea mayor que d.</p>
+                    <div class="ejemplo-programa">
+                        <img src="img/godel_ejemplo_programa.png" alt="Ejemplo en código del lenguaje de programación Gödel">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="botones">
+            <a href="investigaciones.html"><button><span></span>REGRESAR</button></a>
+            <a href="index.html"><button><span></span>INICIO</button></a>
+            <a href="trabajos.html"><button><span></span>TRABAJOS</button></a>
+        </div>
+    </footer>
+</body>
+</html>
